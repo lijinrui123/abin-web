@@ -1,0 +1,58 @@
+import { createWebHistory, createRouter } from 'vue-router'
+import Layout from "@/components/Layout/index.vue";
+
+export const constantRoutes = [
+  {
+    path: '/',
+    component: Layout,
+    redirect: '/home',
+    hidden: true,
+    children: [
+      {
+        path: '/home',
+        component: () => import('@/views/home/index.vue')
+      },
+      {
+        path: '/games',
+        component: () => import('@/views/games/index.vue')
+      },
+      {
+        path: '/tools',
+        component: () => import('@/views/tools/index.vue')
+      },
+      {
+        path: '/notes',
+        component: () => import('@/views/notes/index.vue')
+      },
+      {
+        path: '/relax',
+        component: () => import('@/views/relax/index.vue')
+      },
+      {
+        path: '/demos',
+        component: () => import('@/views/demos/index.vue')
+      },
+    ]
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    component: () => import('@/views/error/404'),
+    hidden: true
+  }
+]
+
+const createRoute = () =>
+  createRouter({
+    history: createWebHistory(),
+    routes: constantRoutes,
+    scrollBehavior(to, from, savedPosition) {
+      if (savedPosition) {
+        return savedPosition
+      } else {
+        return { top: 0 }
+      }
+    }
+  })
+
+const router = createRoute()
+export default router
