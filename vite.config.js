@@ -23,9 +23,7 @@ export default defineConfig({
     extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.vue']
   },
   build: {
-    assetsRoot: path.resolve(__dirname, '../dist'),
-    assetsSubDirectory: 'static',
-    assetsPublicPath: './',//此处为修改的地方，这里加. 
+    assetsPublicPath: './assets',//此处为修改的地方，这里加. 
   },
   server: {
     host: 'localhost', // 指定服务器主机名
