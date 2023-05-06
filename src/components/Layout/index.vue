@@ -68,6 +68,7 @@
   padding-right: $--padding-side;
   background: $--color-body;
   overflow-y: scroll;
+  overflow-x: hidden;
   &::-webkit-scrollbar {
     width: 5px;
     background-color: #ff5a00;
@@ -75,6 +76,21 @@
   &::-webkit-scrollbar-thumb{
     width: 5px;
     background: yellow;
+  }
+}
+
+@media (max-width: 480px) {
+  header{
+    bottom: 0;
+    top: unset !important;
+    box-shadow: 0 -1px 2px 0 rgba(0,0,0,.05);
+  }
+  .content{
+    padding-top: 20px;
+    padding-bottom: calc($--header-height + 20px);
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 }
 </style>

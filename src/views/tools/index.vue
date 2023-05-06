@@ -453,4 +453,26 @@ const toNav = (index) => {
     }
   }
 }
+
+@media (max-width: 480px) {
+  .navigation-tools {
+    display: none;
+    // top: 0;
+    // dl{
+    //   display: flex;
+    // }
+  }
+  .box{
+    // margin-top: 100px;
+    section{
+      padding: 58px 16px 16px 16px;
+      header{
+        padding: 0 16px;
+      }
+      .tool-item{
+        width: 140px;
+      }
+    }
+  }
+}
 </style>

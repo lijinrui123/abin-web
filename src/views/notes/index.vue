@@ -2,7 +2,7 @@
   <div class="page">
     <div class="switch">
       <label class="plane-switch">
-        <input type="checkbox" />
+        <input type="checkbox" @change="onChangeMode"/>
         <div>
           <div>
             <svg viewBox="0 0 13 13">
@@ -17,7 +17,7 @@
           <span class="cloud two"></span>
         </div>
       </label>
-      <span class="switch-mode">精简版</span>
+      <span class="switch-mode">{{ mode == 0?'精简版':'官方文档' }}</span>
     </div>
 
     <div class="box">
@@ -30,6 +30,12 @@
 </template>
 
 <script setup>
+import { ref } from "vue";
+
+const mode = ref(0)
+const onChangeMode = () => {
+  mode.value = mode.value == 0?1:0
+}
 </script>
 
 <style lang="scss" scoped>
@@ -41,7 +47,7 @@
 }
 .box {
   width: 1080px;
-  min-height: 300px;
+  min-height: 80vh;
   padding: 16px;
   margin: 0 auto;
   border-radius: 8px;
@@ -51,13 +57,34 @@
   margin-bottom: 20px;
   background-color: $--color-box;
   a {
-    display: inline-block;
-    text-decoration: underline;
-    width: 100px;
-    height: 42px;
-    flex-shrink: 0;
-    line-height: 42px;
+    position: relative;
+    display: inline-flex;
+    width: fit-content;
+    height: 22px;
+    padding: 0 12px;
+    margin: 4px 18px;
+    border-radius: 11px;
     cursor: pointer;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 22px;
+    overflow: visible;
+    &::after{
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 0;
+      border-bottom: 2px solid #1890ff;
+      transition: all .4s;
+    }
+    &:hover{
+      &::after{
+        height: 100%;
+        border: 2px solid #1890ff;
+      }
+    }
   }
 }
 
@@ -72,6 +99,7 @@
     font-size: 14px;
     margin-top: 8px;
     text-align: center;
+    white-space: nowrap;
   }
 }
 
@@ -270,6 +298,18 @@
 
   100% {
     transform: translateX(0);
+  }
+}
+
+
+@media (max-width: 480px) {
+  .switch{
+    position: relative;
+    margin-top: 0;
+  }
+  .box{
+    margin-top: 12px;
+    padding: 12px 0;
   }
 }
 </style>
