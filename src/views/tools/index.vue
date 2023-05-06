@@ -72,39 +72,6 @@ const list = ref([
         link: 'http://www.ico51.cn/'
       }
     ]
-  },
-  {
-    id: 'sheji2',
-    name: '设计工具',
-    collection: [
-      {
-        icon: 'https://mastergo.com/favicon.ico',
-        name: 'masterGo',
-        link: 'https://mastergo.com/'
-      }
-    ]
-  },
-  {
-    id: 'sheji3',
-    name: '设计工具',
-    collection: [
-      {
-        icon: 'https://mastergo.com/favicon.ico',
-        name: 'masterGo',
-        link: 'https://mastergo.com/'
-      }
-    ]
-  },
-  {
-    id: 'sheji4',
-    name: '设计工具',
-    collection: [
-      {
-        icon: 'https://mastergo.com/favicon.ico',
-        name: 'masterGo',
-        link: 'https://mastergo.com/'
-      }
-    ]
   }
 ])
 
@@ -191,6 +158,8 @@ const toNav = (index) => {
         vertical-align: middle;
       }
       .tool-name {
+        font-size: 14px;
+        color: $--color-text;
         vertical-align: middle;
       }
     }
