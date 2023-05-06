@@ -5,7 +5,7 @@ export const constantRoutes = [
   {
     path: '/',
     component: Layout,
-    redirect: '/abin-web/tools',
+    redirect: '/abin-web/games',
     hidden: true,
     children: [
       {
@@ -36,7 +36,7 @@ export const constantRoutes = [
   },
   {
     path: '/:pathMatch(.*)*',
-    component: () => import('@/views/error/404'),
+    component: () => import('@/views/home/index.vue'),
     hidden: true
   }
 ]
