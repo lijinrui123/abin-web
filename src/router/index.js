@@ -36,7 +36,7 @@ export const constantRoutes = [
   },
   {
     path: '/:pathMatch(.*)*',
-    component: () => import('@/views/home/index.vue'),
+    component: () => import('@/views/error/404'),
     hidden: true
   }
 ]
