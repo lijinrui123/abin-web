@@ -3,33 +3,33 @@ import Layout from "@/components/Layout/index.vue";
 
 export const constantRoutes = [
   {
-    path: '/',
+    path: '/abin-web',
     component: Layout,
     redirect: '/tools',
     hidden: true,
     children: [
       {
-        path: '/home',
+        path: '/abin-web/home',
         component: () => import('@/views/home/index.vue')
       },
       {
-        path: '/games',
+        path: '/abin-web/games',
         component: () => import('@/views/games/index.vue')
       },
       {
-        path: '/tools',
+        path: '/abin-web/tools',
         component: () => import('@/views/tools/index.vue')
       },
       {
-        path: '/notes',
+        path: '/abin-web/notes',
         component: () => import('@/views/notes/index.vue')
       },
       {
-        path: '/relax',
+        path: '/abin-web/relax',
         component: () => import('@/views/relax/index.vue')
       },
       {
-        path: '/demos',
+        path: '/abin-web/demos',
         component: () => import('@/views/demos/index.vue')
       },
     ]
