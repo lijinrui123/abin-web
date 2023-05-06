@@ -5,38 +5,38 @@ export const constantRoutes = [
   {
     path: '/',
     component: Layout,
-    redirect: '/games',
+    redirect: '/abin-web/tools',
     hidden: true,
     children: [
       {
-        path: '/home',
+        path: '/abin-web/home',
         component: () => import('@/views/home/index.vue')
       },
       {
-        path: '/games',
+        path: '/abin-web/games',
         component: () => import('@/views/games/index.vue')
       },
       {
-        path: '/tools',
+        path: '/abin-web/tools',
         component: () => import('@/views/tools/index.vue')
       },
       {
-        path: '/notes',
+        path: '/abin-web/notes',
         component: () => import('@/views/notes/index.vue')
       },
       {
-        path: '/relax',
+        path: '/abin-web/relax',
         component: () => import('@/views/relax/index.vue')
       },
       {
-        path: '/demos',
+        path: '/abin-web/demos',
         component: () => import('@/views/demos/index.vue')
       },
     ]
   },
   {
     path: '/:pathMatch(.*)*',
-    redirect: '/tools',
+    redirect: '/abin-web/tools',
     hidden: true
   }
 ]
