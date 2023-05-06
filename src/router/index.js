@@ -3,7 +3,7 @@ import Layout from "@/components/Layout/index.vue";
 
 export const constantRoutes = [
   {
-    path: '/abin-web',
+    path: '/',
     component: Layout,
     redirect: '/abin-web/tools',
     hidden: true,
