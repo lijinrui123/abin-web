@@ -12,9 +12,9 @@
       </dl>
     </div>
     <div class="box">
-      <section v-for="(tool, index) in list" :id="tool.id">
-        <header>{{ tool.name }}</header>
-        <a target="_blank" :href="tool.link" class="tool-item" v-for="link in tool.collection" :key="link.link"
+      <section v-for="(tool, index) in list">
+        <header :id="tool.id">{{ tool.name }}</header>
+        <a target="_blank" class="tool-item" v-for="link in tool.collection" :key="link.link" :href="link.link"
           ><img :data-src="link.icon" alt="" :src="link.icon" />
           <span class="tool-name">{{ link.name }}</span></a
         >
@@ -27,8 +27,75 @@
 import { ref } from 'vue'
 
 import icon1 from "@/assets/icons/icon1.png";
+import icon2 from "@/assets/icons/icon2.png";
 
 const list = ref([
+{
+    id: 'often',
+    name: '常用工具',
+    collection: [
+      {
+        icon: 'https://caniuse.com/img/favicon-128.png',
+        name: '兼容性查询',
+        link: 'https://caniuse.com/'
+      },
+      {
+        icon: 'https://www.bootcdn.cn/assets/ico/favicon.ico?1644166305141',
+        name: 'BootCDN',
+        link: 'https://www.bootcdn.cn/'
+      },
+      {
+        icon: 'https://static.clewm.net/static/images/favicon.ico',
+        name: '草料二维码',
+        link: 'https://cli.im/'
+      },
+      {
+        icon: 'https://www.hlcode.cn/favicon.ico',
+        name: '互联二维码',
+        link: 'https://www.hlcode.cn/'
+      },
+      {
+        icon: 'http://www.jsons.cn/favicon.ico',
+        name: '正则表达式测试',
+        link: 'http://www.jsons.cn/reg/'
+      },
+      {
+        icon: 'https://any86.github.io/any-rule/icon.png',
+        name: '正则大全',
+        link: 'https://any86.github.io/any-rule/'
+      },
+      {
+        icon: 'http://www.cxy521.com/static/img/index/tool/convertio.ico',
+        name: '文件格式转换',
+        link: 'https://convertio.co/zh/'
+      },
+      {
+        icon: 'https://www.aconvert.com/favicon.ico',
+        name: '文件格式转换',
+        link: 'https://www.aconvert.com/cn/audio/'
+      },
+      {
+        icon: 'http://www.cxy521.com/static/img/index/tool/zf.png',
+        name: '中文简繁体转换',
+        link: 'https://tool.lu/zhconvert'
+      },
+      {
+        icon: 'http://www.cxy521.com/static/img/index/resources/wd.ico',
+        name: '字数统计',
+        link: 'https://www.eteste.com/'
+      },
+      {
+        icon: 'http://www.cxy521.com/static/img/index/tool/epochConverter.jpg',
+        name: '时间戳转换',
+        link: 'https://www.epochconverter.com/'
+      },
+      {
+        icon: 'https://datav.aliyun.com/favicon.ico',
+        name: '阿里云地图',
+        link: 'https://datav.aliyun.com/portal/school/atlas/area_selector'
+      },
+    ]
+  },
   {
     id: 'img',
     name: '图片处理',
@@ -52,6 +119,11 @@ const list = ref([
         icon: 'http://www.cxy521.com/static/img/index/image/51tools.ico',
         name: '在线SVG制作',
         link: 'https://51tools.info/svg/'
+      },
+      {
+        icon: 'https://c.runoob.com/more/svgeditor/images/favicon.svg',
+        name: 'SVG编辑器',
+        link: 'https://c.runoob.com/more/svgeditor/'
       },
       {
         icon: icon1,
@@ -141,21 +213,152 @@ const list = ref([
     ]
   },
   {
-    id: 'often',
-    name: '常用工具',
+    id: 'css',
+    name: 'css工具',
     collection: [
       {
-        icon: 'https://caniuse.com/img/favicon-128.png',
-        name: '兼容性查询',
-        link: 'https://caniuse.com/'
+        icon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAY1BMVEX///8AAADr+fr////1/PwAqrsAprgKrr5hy9XU8fQUssH0+/xQxdEitsUwusg/v8zE7PAds8P////p+Pqw5eqp4+mN2eH3/P2h4OeQ2+I2vMra8/a86e2b3uRrzthKw89Ewc0z3iepAAAABXRSTlPwAO/g70YqzXQAAADSSURBVDjLhdNLbsMwDARQuqlGjqiv/3HaJPc/ZWUHBYwWpGdH8GGkDak5CTUXog8hn0QXaohbKyQMHVVwgxEC12+g/QVHCOzT9QicL+4da12Myf4F6/h4+pqXnzLPfP8HbHmXr7kf2hjc8YljJl7K/gMBLLPftwLAyLGOIsCjq3sZIHbboDTkEUYB8BxUYO8TjALQsjMKqNMNGkDioINhhFEAAq86+P6C0UDgpIJaYIKVAdKc/BJkEPucXk+5AVMuBtofit22MhBzPb+s09s8ve4fJkoXyynCJe4AAAAASUVORK5CYII=',
+        name: '贝塞尔曲线',
+        link: 'https://cubic-bezier.com/#.17,.67,.83,.67'
       },
       {
-        icon: 'https://www.bootcdn.cn/assets/ico/favicon.ico?1644166305141',
-        name: 'BootCDN',
-        link: 'https://www.bootcdn.cn/'
+        icon: 'https://www.bezier-curve.com/favicon.ico',
+        name: '贝塞尔曲线',
+        link: 'https://www.bezier-curve.com/'
+      },
+      {
+        icon: '	https://cssgradient.io/images/favicon-23859487.png',
+        name: 'css渐变色',
+        link: 'https://cssgradient.io/'
+      },
+      {
+        icon: 'https://shadows.brumm.af/favicon.svg',
+        name: 'css阴影',
+        link: 'https://shadows.brumm.af/'
+      },
+      {
+        icon: 'http://tools.jb51.net/favicon.ico',
+        name: '在线clip-path',
+        link: 'http://tools.jb51.net/code/css3path'
+      },
+      {
+        icon: '	https://cssgrid-generator.netlify.app/favicon.ico',
+        name: 'Grid网格布局',
+        link: 'https://cssgrid-generator.netlify.app/'
+      },
+      {
+        icon: '	https://animxyz.com/assets/static/animxyz-logo.ce0531f.39f3bde368e480505b70778acaa2ac74.png',
+        name: 'animxyz',
+        link: 'https://animxyz.com/'
+      },
+      {
+        icon: 'https://getwaves.io/favicon-32x32.png',
+        name: 'svg波浪生成器',
+        link: 'https://getwaves.io/'
+      },
+    ]
+  },
+  {
+    id: 'cool',
+    name: '炫酷动效',
+    collection: [
+      {
+        icon: '	https://whirl.netlify.app/favicon.ico',
+        name: 'whirl加载动效',
+        link: 'https://whirl.netlify.app/'
+      },
+      {
+        icon: 'https://uiverse.io/favicon-32x32.png',
+        name: 'uiverse按钮',
+        link: 'https://uiverse.io/buttons'
+      },
+      {
+        icon: 'https://www.handsome-css.com/favicon/favicon.ico',
+        name: 'AwA-UI小组件',
+        link: 'https://www.handsome-css.com/buttons'
+      },
+      {
+        icon: 'http://www.bootstrapmb.com/content/images/fav.png',
+        name: 'css动画',
+        link: 'http://www.bootstrapmb.com/tag/cssdonghua'
+      },
+      {
+        icon: icon2,
+        name: 'CSS Tricks',
+        link: 'https://qishaoxuan.github.io/css_tricks/'
+      },
+
+      
+    ]
+  },
+  {
+    id: '图标',
+    name: '图标',
+    collection: [
+      {
+        icon: 'https://img.alicdn.com/imgextra/i2/O1CN01ZyAlrn1MwaMhqz36G_!!6000000001499-73-tps-64-64.ico',
+        name: 'iconfont',
+        link: 'https://www.iconfont.cn/'
+      },
+      {
+        icon: 'https://unpkg.byted-static.com/byted/arco-config/1.0.9/assets/icon-box.ico',
+        name: 'iconBox',
+        link: 'https://arco.design/iconbox/libs'
+      },
+      {
+        icon: 'https://lf1-cdn2-tos.bytegoofy.com/bydesign/iconparksite/logo.svg',
+        name: 'iconPark',
+        link: 'https://iconpark.oceanengine.com/official'
+      },
+      {
+        icon: 'https://iconsvg.xyz/favicon-32.png',
+        name: '自定义icon',
+        link: 'https://iconsvg.xyz/'
+      },
+      {
+        icon: '	https://www.fonts.net.cn/favicon.ico',
+        name: '字体天下',
+        link: 'https://www.fonts.net.cn/'
+      },
+      {
+        icon: '	https://www.googlefonts.cn/Public/google/zh-cn/gstatic/google_fonts_lodp.ico',
+        name: '字体下载',
+        link: 'https://www.emojiall.com/zh-hans'
+      },
+      {
+        icon: '	https://www.emojiall.com/favicon.ico',
+        name: 'emojiall',
+        link: 'https://www.emojiall.com/zh-hans'
+      },
+      {
+        icon: 'https://www.webfx.com/wp-content/uploads/2023/05/icon-ux.svg',
+        name: 'md-emoji',
+        link: 'https://www.webfx.com/tools/emoji-cheat-sheet/'
       }
     ]
-  }
+  },
+  {
+    id: 'chrome',
+    name: 'Chrome插件',
+    collection: [
+      {
+        icon: 'http://www.cxy521.com/static/img/index/chrome/onetab.jpg',
+        name: 'OneTab标签管理',
+        link: 'https://chrome.google.com/webstore/category/extensions?hl=zh-CN'
+      }
+    ]
+  },
+  {
+    id: 'vscode',
+    name: 'vscode插件',
+    collection: [
+      {
+        icon: 'https://techer.gallerycdn.vsassets.io/extensions/techer/open-in-browser/2.0.0/1534049617896/Microsoft.VisualStudio.Services.Icons.Default',
+        name: 'open in browser',
+        link: 'https://code.visualstudio.com/'
+      }
+    ]
+  },
 ])
 
 const curIndex = ref(0)
@@ -168,7 +371,7 @@ const toNav = (index) => {
 .page {
   margin: 0 auto;
   position: relative;
-  max-width: 1260px;
+  max-width: 1300px;
 }
 .navigation-tools {
   position: fixed;
@@ -214,6 +417,7 @@ const toNav = (index) => {
     padding: 42px 48px 10px 48px;
     border-radius: 8px;
     display: flex;
+    align-content: flex-start;
     flex-wrap: wrap;
     margin-bottom: 20px;
     background-color: $--color-box;
