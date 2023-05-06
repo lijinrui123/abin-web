@@ -36,7 +36,7 @@ export const constantRoutes = [
   },
   {
     path: '/:pathMatch(.*)*',
-    component: () => import('@/views/home/index.vue'),
+    redirect: '/abin-web/tools',
     hidden: true
   }
 ]
