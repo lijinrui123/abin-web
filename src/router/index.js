@@ -43,7 +43,7 @@ export const constantRoutes = [
 
 const createRoute = () =>
   createRouter({
-    history: createWebHashHistory(),
+    history: createWebHistory(),
     routes: constantRoutes,
     scrollBehavior(to, from, savedPosition) {
       if (savedPosition) {

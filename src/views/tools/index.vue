@@ -26,9 +26,11 @@
 <script setup>
 import { ref } from 'vue'
 
+import icon1 from "@/assets/icons/icon1.png";
+
 const list = ref([
   {
-    id: 'sheji',
+    id: 'img',
     name: '图片处理',
     collection: [
       {
@@ -47,29 +49,110 @@ const list = ref([
         link: 'https://www.tutieshi.com/'
       },
       {
+        icon: 'http://www.cxy521.com/static/img/index/image/51tools.ico',
+        name: '在线SVG制作',
+        link: 'https://51tools.info/svg/'
+      },
+      {
+        icon: icon1,
+        name: '趣作图',
+        link: 'https://www.pickwant.com/home'
+      },
+      {
         icon: 'https://www.toptal.com/developers/css/sprite-generator/static/images/favicon.png',
         name: '图片背景消除',
         link: 'https://www.remove.bg/zh'
       },
       {
-        icon: 'https://img1.baidu.com/it/u=50627749,1570510824&fm=253&fmt=auto&app=120&f=JPEG?w=1280&h=800',
-        name: '趣作图',
-        link: 'https://www.pickwant.com/home'
+        icon: 'http://www.cxy521.com/static/img/index/image/iloveimg.png',
+        name: '图片在线编辑',
+        link: 'https://www.iloveimg.com/zh-cn'
       },
       {
-        icon: 'https://img1.baidu.com/it/u=50627749,1570510824&fm=253&fmt=auto&app=120&f=JPEG?w=1280&h=800',
+        icon: 'http://www.cxy521.com/static/img/index/image/gaoding.ico',
+        name: '在线PS',
+        link: 'https://www.uupoop.com/#/'
+      },
+      {
+        icon: 'http://www.cxy521.com/static/img/index/image/onlinedo.ico',
         name: '图片加水印',
         link: 'https://www.onlinedo.cn/img-shuiyin'
       },
       {
-        icon: 'https://img1.baidu.com/it/u=50627749,1570510824&fm=253&fmt=auto&app=120&f=JPEG?w=1280&h=800',
+        icon: 'http://www.cxy521.com/static/img/index/image/apowersoft.ico',
         name: '图片去水印',
         link: 'https://www.apowersoft.cn/image-watermark-remover'
       },
       {
-        icon: 'https://img1.baidu.com/it/u=50627749,1570510824&fm=253&fmt=auto&app=120&f=JPEG?w=1280&h=800',
+        icon: 'http://www.cxy521.com/static/img/index/image/zuohaotu.ico',
+        name: '图片合并切割',
+        link: 'http://www.zuohaotu.com/'
+      },
+      {
+        icon: 'http://www.cxy521.com/static/img/index/image/ico51.ico',
         name: '生成透明Icon',
         link: 'http://www.ico51.cn/'
+      },
+      {
+        icon: 'http://www.cxy521.com/static/img/index/image/designevo.ico',
+        name: 'logo设计',
+        link: 'https://www.designevo.com/cn/logo-maker/'
+      },
+      {
+        icon: 'http://www.cxy521.com/static/img/index/image/zhuang.png',
+        name: '搞怪图片生成',
+        link: 'https://c.tianhezulin.com/'
+      },
+      {
+        icon: 'http://www.cxy521.com/static/img/index/image/fabiaoqing.png',
+        name: '表情包',
+        link: 'https://www.fabiaoqing.com/'
+      },
+      {
+        icon: 'http://www.cxy521.com/static/img/index/image/biaoqingbao.ico',
+        name: '表情包制作器',
+        link: 'https://www.wakatool.com/maker'
+      },
+      {
+        icon: '	http://www.cxy521.com/static/img/index/image/photomosh.ico',
+        name: '朋克图片生成器',
+        link: 'https://photomosh.com/'
+      },
+      {
+        icon: '	http://www.cxy521.com/static/img/index/image/photomosh.ico',
+        name: '朋克图片生成器',
+        link: 'https://photomosh.com/'
+      },
+      {
+        icon: 'http://www.cxy521.com/static/img/index/image/pexels.ico',
+        name: 'Pexels图片素材',
+        link: 'https://www.pexels.com/zh-cn/'
+      },
+      {
+        icon: 'http://www.cxy521.com/static/img/index/image/pixabay.png',
+        name: 'Pixabay图片素材',
+        link: 'https://pixabay.com/'
+      },
+      {
+        icon: 'http://www.cxy521.com/static/img/index/image/pxhere.png',
+        name: 'Pxhere图片素材',
+        link: 'https://pxhere.com/'
+      },
+    ]
+  },
+  {
+    id: 'often',
+    name: '常用工具',
+    collection: [
+      {
+        icon: 'https://caniuse.com/img/favicon-128.png',
+        name: '兼容性查询',
+        link: 'https://caniuse.com/'
+      },
+      {
+        icon: 'https://www.bootcdn.cn/assets/ico/favicon.ico?1644166305141',
+        name: 'BootCDN',
+        link: 'https://www.bootcdn.cn/'
       }
     ]
   }
@@ -138,6 +221,7 @@ const toNav = (index) => {
       position: absolute;
       left: 0;
       top: 0;
+      width: 100%;
       line-height: 42px;
       font-size: 15px;
       padding-left: 46px;
