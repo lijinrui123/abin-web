@@ -5,7 +5,7 @@ export const constantRoutes = [
   {
     path: '/',
     component: Layout,
-    redirect: '/abin-web/abin-web/tools',
+    redirect: '/abin-web/tools',
     hidden: true,
     children: [
       {
