@@ -9,6 +9,13 @@
   <main class="content">
     <router-view />
   </main>
+
+  <footer>
+    <a href="https://gitee.com/web-abin/abin-web">源码链接</a>、
+    <a href="https://juejin.cn/user/994399097982728">掘金主页</a>、
+    <a href="https://blog.csdn.net/qq_38974163?type=blog">CSDN主页</a>、
+    <a href="http://web-abin.gitee.io/blog">个人博客</a>
+  </footer>
 </template>
 
 <script setup>
@@ -61,21 +68,25 @@
 
 .content{
   width: 100%;
-  height: 100vh;
+  height: fit-content;
   padding-top: calc($--header-height + 20px);
   padding-bottom: 40px;
   padding-left: $--padding-side;
   padding-right: $--padding-side;
   background: $--color-body;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  &::-webkit-scrollbar {
-    width: 5px;
-    background-color: #ff5a00;
-  }
-  &::-webkit-scrollbar-thumb{
-    width: 5px;
-    background: yellow;
+}
+
+footer{
+  position: relative;
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  border-top: 1px solid $--color-border;
+  a{
+    line-height: 25px;
+    font-size: 14px;
   }
 }
 
@@ -93,4 +104,5 @@
     }
   }
 }
+
 </style>

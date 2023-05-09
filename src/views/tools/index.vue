@@ -210,6 +210,11 @@ const list = ref([
         name: 'Pxhere图片素材',
         link: 'https://pxhere.com/'
       },
+      {
+        icon: 'https://huatu.98youxi.com/favicon.ico',
+        name: '流程图/思维导图',
+        link: 'https://huatu.98youxi.com/home/myfile/'
+      },
     ]
   },
   {
