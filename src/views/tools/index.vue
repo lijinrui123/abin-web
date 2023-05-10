@@ -242,6 +242,11 @@ const list = ref([
         link: 'https://shadows.brumm.af/'
       },
       {
+        icon: 'https://box-shadow.art/wp-content/uploads/2021/10/logo-icon-150x150.png',
+        name: 'box-shadow案例',
+        link: 'https://box-shadow.art/'
+      },
+      {
         icon: 'http://tools.jb51.net/favicon.ico',
         name: '在线clip-path',
         link: 'http://tools.jb51.net/code/css3path'

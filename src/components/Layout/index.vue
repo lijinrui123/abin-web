@@ -103,6 +103,9 @@ footer{
       display: none;
     }
   }
+  footer{
+    display: none;
+  }
 }
 
 </style>
