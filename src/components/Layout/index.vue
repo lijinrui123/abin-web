@@ -11,10 +11,10 @@
   </main>
 
   <footer>
-    <a href="https://gitee.com/web-abin/abin-web">源码链接</a>、
-    <a href="https://juejin.cn/user/994399097982728">掘金主页</a>、
-    <a href="https://blog.csdn.net/qq_38974163?type=blog">CSDN主页</a>、
-    <a href="http://web-abin.gitee.io/blog">个人博客</a>
+    <a href="https://gitee.com/web-abin/abin-web" target="_blank">源码链接</a>、
+    <a href="https://juejin.cn/user/994399097982728" target="_blank">掘金主页</a>、
+    <a href="https://blog.csdn.net/qq_38974163?type=blog" target="_blank">CSDN主页</a>、
+    <a href="http://web-abin.gitee.io/blog" target="_blank">个人博客</a>
   </footer>
 </template>
 
