@@ -94,6 +94,11 @@ const list = ref([
         name: '阿里云地图',
         link: 'https://datav.aliyun.com/portal/school/atlas/area_selector'
       },
+      {
+        icon: 'https://csstools.chinaz.com/favicon.ico',
+        name: '站长工具',
+        link: 'https://tool.chinaz.com/'
+      },
     ]
   },
   {
