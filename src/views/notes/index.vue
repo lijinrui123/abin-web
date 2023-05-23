@@ -59,7 +59,17 @@ const list = ref([
       link: 'https://juejin.cn/post/7161967494905724942#heading-17',
       name: '原子化CSS引擎UnoCSS'
     }]
-}])
+},{
+    id: '腾讯云trtc',
+    name: '腾讯云trtc',
+    official: [{
+      link: '腾讯云trtc web端API文档',
+      name: 'https://cloud.tencent.com/document/product/647/17249'
+    }],
+    others: []
+},])
+
+
 
 const mode = ref(0)
 const onChangeMode = () => {
