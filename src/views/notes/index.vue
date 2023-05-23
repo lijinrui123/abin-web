@@ -1,40 +1,79 @@
 <template>
-  <div class="page">
-    <div class="switch">
-      <label class="plane-switch">
-        <input type="checkbox" @change="onChangeMode"/>
-        <div>
-          <div>
-            <svg viewBox="0 0 13 13">
-              <path
-                d="M1.55989957,5.41666667 L5.51582215,5.41666667 L4.47015462,0.108333333 L4.47015462,0.108333333 C4.47015462,0.0634601974 4.49708054,0.0249592654 4.5354546,0.00851337035 L4.57707145,0 L5.36229752,0 C5.43359776,0 5.50087375,0.028779451 5.55026392,0.0782711996 L5.59317877,0.134368264 L7.13659662,2.81558333 L8.29565964,2.81666667 C8.53185377,2.81666667 8.72332694,3.01067661 8.72332694,3.25 C8.72332694,3.48932339 8.53185377,3.68333333 8.29565964,3.68333333 L7.63589819,3.68225 L8.63450135,5.41666667 L11.9308317,5.41666667 C12.5213171,5.41666667 13,5.90169152 13,6.5 C13,7.09830848 12.5213171,7.58333333 11.9308317,7.58333333 L8.63450135,7.58333333 L7.63589819,9.31666667 L8.29565964,9.31666667 C8.53185377,9.31666667 8.72332694,9.51067661 8.72332694,9.75 C8.72332694,9.98932339 8.53185377,10.1833333 8.29565964,10.1833333 L7.13659662,10.1833333 L5.59317877,12.8656317 C5.55725264,12.9280353 5.49882018,12.9724157 5.43174295,12.9907056 L5.36229752,13 L4.57707145,13 L4.55610333,12.9978962 C4.51267695,12.9890959 4.48069792,12.9547924 4.47230803,12.9134397 L4.47223088,12.8704208 L5.51582215,7.58333333 L1.55989957,7.58333333 L0.891288881,8.55114605 C0.853775374,8.60544678 0.798421006,8.64327676 0.73629202,8.65879796 L0.672314689,8.66666667 L0.106844414,8.66666667 L0.0715243949,8.66058466 L0.0715243949,8.66058466 C0.0297243066,8.6457608 0.00275502199,8.60729104 0,8.5651586 L0.00593007386,8.52254537 L0.580855011,6.85813984 C0.64492547,6.67265611 0.6577034,6.47392717 0.619193545,6.28316421 L0.580694768,6.14191703 L0.00601851064,4.48064746 C0.00203480725,4.4691314 0,4.45701613 0,4.44481314 C0,4.39994001 0.0269259152,4.36143908 0.0652999725,4.34499318 L0.106916826,4.33647981 L0.672546853,4.33647981 C0.737865848,4.33647981 0.80011301,4.36066329 0.848265401,4.40322477 L0.89131128,4.45169723 L1.55989957,5.41666667 Z"
-                fill="currentColor"
-              ></path>
-            </svg>
-          </div>
-          <span class="street-middle"></span>
-          <span class="cloud"></span>
-          <span class="cloud two"></span>
-        </div>
-      </label>
-      <span class="switch-mode">{{ mode == 0?'精简版':'官方文档' }}</span>
-    </div>
+  <div class="page"  @click="showPanel = false">
 
     <div class="box">
-      <a href="http://hemin.cn/jq/">jquery</a>
-      <a href="http://hemin.cn/jq/">jquery</a>
-      <a href="http://hemin.cn/jq/">jquery</a>
-      <a href="http://hemin.cn/jq/">jquery</a>
+      <div class="item-box" v-for="item in list" :key="item.id" @click.stop="onLookPanel(item)">
+        <span class="item">{{ item.name }}</span>
+      </div>
+    </div>
+
+    <div class="popup" v-if="showPanel" @click.stop>
+      <h3>{{  activeDocs.name }}</h3>
+      <p>官方文档</p>
+      <a :href="link1.link" target="_blank" v-for="link1 in activeDocs.official" :key="link1.link">{{  link1.name }}</a>
+      <p v-if="activeDocs.others">相关文档</p>
+      <a :href="link2.link" target="_blank" v-for="link2 in activeDocs.others" :key="link2.link">{{  link2.name }}</a>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { nextTick, ref } from "vue";
+
+const list = ref([
+{
+    id: 'jquery',
+    name: 'jquery',
+    official: [],
+    others: [{
+      link: 'http://hemin.cn/jq/',
+      name: 'jQuery 1.12.1 API速查表'
+    }]
+},{
+    id: 'canvas',
+    name: 'canvas',
+    official: [],
+    others: [{
+      link: 'http://hemin.cn/jq/',
+      name: 'jQuery 1.12.1 API速查表'
+    }]
+},{
+    id: 'vite',
+    name: 'vite',
+    official: [],
+    others: [{
+      link: 'http://hemin.cn/jq/',
+      name: 'jQuery 1.12.1 API速查表'
+    }]
+},{
+    id: 'unocss',
+    name: 'unocss',
+    official: [{
+      link: 'https://unocss.dev/integrations/vite',
+      name: 'https://unocss.dev/integrations/vite'
+    }],
+    others: [{
+      link: 'https://juejin.cn/post/7129153610855743525',
+      name: '新一代原子化引擎 unocss'
+    },{
+      link: 'https://juejin.cn/post/7161967494905724942#heading-17',
+      name: '原子化CSS引擎UnoCSS'
+    }]
+}])
 
 const mode = ref(0)
 const onChangeMode = () => {
   mode.value = mode.value == 0?1:0
+}
+
+const activeDocs = ref({})
+const showPanel = ref(false)
+const onLookPanel = (item) => {
+  showPanel.value = false
+  nextTick(() =>{
+    showPanel.value = true
+  })
+  activeDocs.value = item
 }
 </script>
 
@@ -56,257 +95,93 @@ const onChangeMode = () => {
   flex-wrap: wrap;
   margin-bottom: 20px;
   background-color: $--color-box;
-  a {
-    position: relative;
-    display: inline-flex;
-    width: fit-content;
-    height: 22px;
-    padding: 0 12px;
-    margin: 4px 18px;
-    border-radius: 11px;
-    cursor: pointer;
-    overflow: hidden;
-    font-size: 14px;
-    line-height: 22px;
-    overflow: visible;
-    &::after{
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 100%;
-      height: 0;
-      border-bottom: 2px solid #1890ff;
-      transition: all .4s;
-    }
-    &:hover{
-      &::after{
-        height: 100%;
-        border: 2px solid #1890ff;
-      }
-    }
-  }
 }
 
-.switch {
-  position: fixed;
-  width: fit-content;
-  margin-top: 20px;
-  &-mode{
-    display: inline-block;
-    width: 50px;
-    align-items: center;
-    font-size: 14px;
-    margin-top: 8px;
-    text-align: center;
-    white-space: nowrap;
-  }
+.item-box{
+  width: 120px;
 }
-
-.plane-switch {
-  transform-origin: center;
-  transform: scale(1.2);
-  --dot: #fff;
-  --street: #6b6d76;
-  --street-line: #a8aab4;
-  --street-line-mid: #c0c2c8;
-  --sky-1: #60a7fa;
-  --sky-2: #2f8efc;
-  --light-1: rgba(255, 233, 0, 1);
-  --light-2: rgba(255, 233, 0, 0.3);
+.item {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 18px;
+  color: #333333;
+  font-family: inherit;
+  font-weight: 800;
   cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.plane-switch input {
-  display: none;
-}
-
-.plane-switch input + div {
-  -webkit-mask-image: -webkit-radial-gradient(white, black);
   position: relative;
-  overflow: hidden;
-  width: 50px;
-  height: 25px;
-  padding: 1px;
-  border-radius: 13px;
-  background: linear-gradient(
-      90deg,
-      var(--street) 0%,
-      var(--street) 25%,
-      var(--sky-1) 75%,
-      var(--sky-2) 100%
-    )
-    left var(--p, 0%) top 0;
-  background-position-x: var(--p, 0%);
-  background-size: 400% auto;
-  transition: background-position 0.6s;
+  border: none;
+  background: none;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
 }
 
-.plane-switch input + div:before,
-.plane-switch input + div:after {
-  content: '';
-  display: block;
+.item:focus,
+.item:hover {
+  color: #1e80ff;
+}
+
+.item:focus:after,
+.item:hover:after {
+  width: 100%;
+  left: 0%;
+}
+.item:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
   position: absolute;
-  transform: translateX(var(--s, 0));
-  transition: transform 0.3s;
-}
-
-.plane-switch input + div:before {
-  width: 42px;
-  right: 2px;
-  top: 4px;
-  height: 1px;
-  background: var(--street-line);
-  box-shadow: 0 16px 0 0 var(--street-line);
-}
-
-.plane-switch input + div:after {
-  width: 2px;
+  width: 0%;
   height: 2px;
-  border-radius: 50%;
-  left: 23px;
-  top: 1px;
-  -webkit-animation: lights2 2s linear infinite;
-  animation: lights2 2s linear infinite;
-  box-shadow: inset 0 0 0 2px var(--light-1), 0 21px 0 var(--light-1),
-    8px 0 0 var(--light-2), 8px 21px 0 var(--light-2), 16px 0 0 var(--light-2),
-    16px 21px 0 var(--light-2);
+  background-color: black;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
 }
 
-.plane-switch input + div span {
-  display: block;
-  position: absolute;
-}
 
-.plane-switch input + div span.street-middle {
-  top: 12px;
-  left: 21px;
-  width: 3px;
-  height: 1px;
-  transform: translateX(var(--s, 0));
-  background: var(--street-line-mid);
-  box-shadow: 5px 0 0 var(--street-line-mid), 10px 0 0 var(--street-line-mid),
-    15px 0 0 var(--street-line-mid), 20px 0 0 var(--street-line-mid),
-    25px 0 0 var(--street-line-mid);
-  transition: transform 0.3s;
-}
-
-.plane-switch input + div span.cloud {
-  width: 12px;
-  height: 4px;
-  border-radius: 2px;
-  background: #fff;
-  position: absolute;
-  top: var(--ct, 8px);
-  left: 100%;
-  opacity: var(--co, 0);
-  transition: opacity 0.3s;
-  -webkit-animation: clouds2 2s linear infinite var(--cd, 0s);
-  animation: clouds2 2s linear infinite var(--cd, 0s);
-}
-
-.plane-switch input + div span.cloud:before,
-.plane-switch input + div span.cloud:after {
-  content: '';
-  position: absolute;
-  transform: translateX(var(--cx, 0));
-  border-radius: 50%;
-  width: var(--cs, 5px);
-  height: var(--cs, 5px);
-  background: #fff;
-  bottom: 1px;
-  left: 1px;
-}
-
-.plane-switch input + div span.cloud:after {
-  --cs: 6px;
-  --cx: 4px;
-}
-
-.plane-switch input + div span.cloud.two {
-  --ct: 20px;
-  --cd: 1s;
-  opacity: var(--co-2, 0);
-}
-
-.plane-switch input + div div {
-  display: table;
-  position: relative;
-  z-index: 1;
-  padding: 5px;
-  border-radius: 50%;
-  background: var(--dot);
-  transform: translateX(var(--x, 0));
-  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.35, 1.2);
-}
-
-.plane-switch input + div div svg {
-  width: 13px;
-  height: 13px;
-  display: block;
-  color: var(--c, var(--street));
-  transition: color 0.6s;
-}
-
-.plane-switch input:checked + div {
-  --p: 100%;
-  --x: 25px;
-  --s: -50px;
-  --c: var(--sky-2);
-  --co: 0.8;
-  --co-2: 0.6;
-}
-
-@keyframes lights2 {
-  20%,
-  30% {
-    box-shadow: inset 0 0 0 2px var(--light-2), 0 21px 0 var(--light-2),
-      8px 0 0 var(--light-1), 8px 21px 0 var(--light-1), 16px 0 0 var(--light-2),
-      16px 21px 0 var(--light-2);
+.popup{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 500px;
+  max-width: 80vw;
+  height: fit-content;
+  padding: 12px;
+  min-height: 200px;
+  border-radius: 12px;
+  background-color: rgba(106, 123, 252, 0.13);
+  border: 2px solid rgb(125, 140, 255);
+  animation: popup .4s cubic-bezier(.17,.67,.83,.67)  forwards;
+  transform-origin: center center;
+  h3{
+    text-align: center;
+    margin-bottom: 8px;
   }
-
-  55%,
-  65% {
-    box-shadow: inset 0 0 0 2px var(--light-2), 0 21px 0 var(--light-2),
-      8px 0 0 var(--light-2), 8px 21px 0 var(--light-2), 16px 0 0 var(--light-1),
-      16px 21px 0 var(--light-1);
+  p{
+    font-size: 18px;
+    font-weight: bold;
   }
-
-  90%,
-  100% {
-    box-shadow: inset 0 0 0 2px var(--light-1), 0 21px 0 var(--light-1),
-      8px 0 0 var(--light-2), 8px 21px 0 var(--light-2), 16px 0 0 var(--light-2),
-      16px 21px 0 var(--light-2);
+  p:nth-of-type(2){
+    margin-top: 20px;
+  }
+  a{
+    font-size: 16px;
+    margin: 6px 0;
   }
 }
-
-@keyframes clouds2 {
-  97% {
-    transform: translateX(-72px);
-    visibility: visible;
+@keyframes popup {
+  from{
+    transform: translate(-50%,-50%) scaleX(0);
   }
-
-  98%,
-  100% {
-    visibility: hidden;
-  }
-
-  99% {
-    transform: translateX(-72px);
-  }
-
-  100% {
-    transform: translateX(0);
+  75%{
+    transform: translate(-50%,-50%) scaleX(1.3);
   }
 }
-
 
 @media (max-width: 480px) {
-  .switch{
-    position: relative;
-    margin-top: 0;
-  }
   .box{
     margin-top: 12px;
     padding: 12px 0;

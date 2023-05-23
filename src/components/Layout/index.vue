@@ -1,7 +1,7 @@
 <template>
   <header class="header flex">
     <router-link class="navigation-link" to="tools">工具</router-link>
-    <router-link class="navigation-link" to="notes">配置项</router-link>
+    <router-link class="navigation-link" to="notes">文档</router-link>
     <router-link class="navigation-link" to="games">游戏</router-link>
     <router-link class="navigation-link" to="relax">摸鱼</router-link>
     <router-link class="navigation-link" to="demos">样例</router-link>
