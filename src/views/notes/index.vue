@@ -11,7 +11,7 @@
       <h3>{{  activeDocs.name }}</h3>
       <p>官方文档</p>
       <a :href="link1.link" target="_blank" v-for="link1 in activeDocs.official" :key="link1.link">{{  link1.name }}</a>
-      <p v-if="activeDocs.others">相关文档</p>
+      <p v-if="activeDocs.others.length">相关文档</p>
       <a :href="link2.link" target="_blank" v-for="link2 in activeDocs.others" :key="link2.link">{{  link2.name }}</a>
     </div>
   </div>
@@ -24,7 +24,10 @@ const list = ref([
 {
     id: 'jquery',
     name: 'jquery',
-    official: [],
+    official: [{
+      link: 'https://www.w3school.com.cn/jquery/index.asp',
+      name: 'jQuery w3school教程'
+    }],
     others: [{
       link: 'http://hemin.cn/jq/',
       name: 'jQuery 1.12.1 API速查表'
@@ -32,19 +35,33 @@ const list = ref([
 },{
     id: 'canvas',
     name: 'canvas',
-    official: [],
+    official: [{
+      link: 'https://www.w3school.com.cn/tags/html_ref_canvas.asp',
+      name: 'HTML Canvas 参考手册(w3school)'
+    }],
     others: [{
-      link: 'http://hemin.cn/jq/',
-      name: 'jQuery 1.12.1 API速查表'
+      link: 'https://www.runoob.com/w3cnote/html5-canvas-intro.html',
+      name: '学习 HTML5 Canvas 这一篇文章就够了'
     }]
 },{
     id: 'vite',
     name: 'vite',
-    official: [],
-    others: [{
-      link: 'http://hemin.cn/jq/',
-      name: 'jQuery 1.12.1 API速查表'
-    }]
+    official: [{
+      link: 'https://cn.vitejs.dev/config/',
+      name: 'vite官方中文文档'
+    }],
+    others: []
+},{
+    id: 'anime.js',
+    name: 'anime.js',
+    official: [{
+      link: 'http://blog.fer-link.com/demo/20220915111146/index2.html',
+      name: 'anime.js 中文文档'
+    },{
+      link: 'https://github.com/juliangarnier/anime',
+      name: 'github'
+    }],
+    others: []
 },{
     id: 'unocss',
     name: 'unocss',
@@ -63,8 +80,8 @@ const list = ref([
     id: '腾讯云trtc',
     name: '腾讯云trtc',
     official: [{
-      link: '腾讯云trtc web端API文档',
-      name: 'https://cloud.tencent.com/document/product/647/17249'
+      link: 'https://cloud.tencent.com/document/product/647/17249',
+      name: '腾讯云trtc web端API文档'
     }],
     others: []
 },])
@@ -161,10 +178,10 @@ const onLookPanel = (item) => {
   height: fit-content;
   padding: 12px;
   min-height: 200px;
-  border-radius: 12px;
+  border-radius: 8px;
   background-color: rgba(106, 123, 252, 0.13);
   border: 2px solid rgb(125, 140, 255);
-  animation: popup .4s cubic-bezier(.17,.67,.83,.67)  forwards;
+  animation: popup .4s ease-out  forwards;
   transform-origin: center center;
   h3{
     text-align: center;
@@ -178,7 +195,8 @@ const onLookPanel = (item) => {
     margin-top: 20px;
   }
   a{
-    font-size: 16px;
+    display: block;
+    font-size: 15px;
     margin: 6px 0;
   }
 }
@@ -187,7 +205,7 @@ const onLookPanel = (item) => {
     transform: translate(-50%,-50%) scaleX(0);
   }
   75%{
-    transform: translate(-50%,-50%) scaleX(1.3);
+    transform: translate(-50%,-50%) scaleX(1);
   }
 }
 
