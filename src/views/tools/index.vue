@@ -360,6 +360,41 @@ const list = ref([
         icon: 'http://www.cxy521.com/static/img/index/chrome/onetab.jpg',
         name: 'OneTab标签管理',
         link: 'https://chrome.google.com/webstore/category/extensions?hl=zh-CN'
+      },
+      {
+        icon: '	http://www.cxy521.com/static/img/index/chrome/fe.png',
+        name: '前端助手插件',
+        link: 'http://www.itmind.net/1470.html'
+      },
+      {
+        icon: 'http://www.cxy521.com/static/img/index/chrome/postman.svg',
+        name: 'Postman网页版',
+        link: 'http://www.itmind.net/1334.html'
+      },
+      {
+        icon: 'https://cdn.kjj8.com/images/2021/11/20211638043297-unnamed-6.png',
+        name: '请求mock插件',
+        link: 'https://www.jianshu.com/p/9278207cdc62'
+      },
+      {
+        icon: 'https://addons.mozilla.org/user-media/addon_icons/1022/1022438-64.png?modified=533cac64',
+        name: '跨域代理插件',
+        link: 'https://www.0z.gs/webDevelopment/1736.html'
+      },
+      {
+        icon: 'http://www.cxy521.com/static/img/icon/github.jpg',
+        name: 'GitHub加速插件',
+        link: 'http://www.itmind.net/217.html'
+      },
+      {
+        icon: 'http://www.cxy521.com/static/img/index/chrome/video.jpg',
+        name: '视频下载插件',
+        link: 'http://www.itmind.net/3092.html'
+      },
+      {
+        icon: 'http://www.cxy521.com/static/img/icon/vue.png',
+        name: 'Vue.js devtools',
+        link: 'http://www.itmind.net/6438.html'
       }
     ]
   },
@@ -370,7 +405,88 @@ const list = ref([
       {
         icon: 'https://techer.gallerycdn.vsassets.io/extensions/techer/open-in-browser/2.0.0/1534049617896/Microsoft.VisualStudio.Services.Icons.Default',
         name: 'open in browser',
-        link: 'https://code.visualstudio.com/'
+        link: 'https://marketplace.visualstudio.com/items?itemName=techer.open-in-browser'
+      },
+      {
+        icon: 'http://www.cxy521.com/static/img/index/vscode/git_graph.jpg',
+        name: 'Git Graph',
+        link: 'https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph'
+      },
+      {
+        icon: 'http://www.cxy521.com/static/img/index/vscode/GitLens.jpg',
+        name: 'GitLens',
+        link: 'https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens'
+      },
+      {
+        icon: 'http://www.cxy521.com/static/img/index/vscode/git_history.jpg',
+        name: 'Git History',
+        link: 'https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory'
+      },
+      {
+        icon: 'http://www.cxy521.com/static/img/index/vscode/git_blame.jpg',
+        name: 'Git Blame',
+        link: 'https://marketplace.visualstudio.com/items?itemName=waderyan.gitblame'
+      },
+      {
+        icon: 'https://kisstkondoros.gallerycdn.vsassets.io/extensions/kisstkondoros/vscode-gutter-preview/0.30.0/1644076638771/Microsoft.VisualStudio.Services.Icons.Default',
+        name: '图片预览',
+        link: 'https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview'
+      },
+      {
+        icon: 'https://cipchk.gallerycdn.vsassets.io/extensions/cipchk/cssrem/3.1.0/1677827217157/Microsoft.VisualStudio.Services.Icons.Default',
+        name: 'px to rem/rpx/vw',
+        link: 'https://marketplace.visualstudio.com/items?itemName=cipchk.cssrem'
+      },
+      {
+        icon: 'https://chendm.gallerycdn.vsassets.io/extensions/chendm/translate/0.1.0/1631010008171/Microsoft.VisualStudio.Services.Icons.Default',
+        name: '生成英文变量名',
+        link: 'https://marketplace.visualstudio.com/items?itemName=chendm.translate'
+      },
+      {
+        icon: 'https://formulahendry.gallerycdn.vsassets.io/extensions/formulahendry/auto-close-tag/0.5.14/1644313109985/Microsoft.VisualStudio.Services.Icons.Default',
+        name: '自动闭合标签',
+        link: 'https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag'
+      },
+      {
+        icon: 'http://www.cxy521.com/static/img/index/vscode/beautify.jpg',
+        name: '代码美化',
+        link: 'https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify'
+      },
+      {
+        icon: 'http://www.cxy521.com/static/img/index/vscode/bookmarks.jpg',
+        name: '代码书签',
+        link: 'https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks'
+      },
+      {
+        icon: '	http://www.cxy521.com/static/img/index/vscode/fileSize.jpg',
+        name: 'FileSize',
+        link: 'https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks'
+      },
+    ]
+  },
+  {
+    id: '更多导航',
+    name: '更多导航',
+    collection: [
+      {
+        icon: 'https://mp-b28966cb-26bc-43ae-b98b-aa286fad0729.cdn.bspapp.com/cloudstorage/31e91b77-d492-4f27-9ce1-d20ad54ad8e2.ico',
+        name: '万能导航',
+        link: 'https://www.5cv.top/'
+      },
+      {
+        icon: 'https://static.runoob.com/images/c-runoob-logo.ico',
+        name: '菜鸟工具',
+        link: 'https://c.runoob.com/'
+      },
+      {
+        icon: 'http://www.cxy521.com/static/img/favicon.ico',
+        name: '程序员导航',
+        link: 'http://www.cxy521.com/'
+      },
+      {
+        icon: 'https://tool.lu/favicon.ico',
+        name: '在线工具',
+        link: 'https://tool.lu/'
       }
     ]
   },

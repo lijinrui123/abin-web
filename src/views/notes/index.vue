@@ -84,7 +84,21 @@ const list = ref([
       name: '腾讯云trtc web端API文档'
     }],
     others: []
-},])
+},{
+    id: 'a标签',
+    name: 'a标签协议',
+    official: [{
+      link: 'https://www.w3school.com.cn/tags/att_a_href.asp',
+      name: 'HTML <a> 标签---W3school'
+    }],
+    others: [{
+      link: 'http://xiaodongxier.com/824.html',
+      name: 'H5中a标签的电话和邮件功能'
+    },{
+      link: 'https://blog.csdn.net/sipallan/article/details/51049925',
+      name: 'html <a>标签属性总结'
+    }]
+}])
 
 
 
@@ -161,7 +175,7 @@ const onLookPanel = (item) => {
   position: absolute;
   width: 0%;
   height: 2px;
-  background-color: black;
+  background-color: #1e80ff;
   transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
   transition-duration: 400ms;
   transition-property: width, left;
@@ -176,8 +190,8 @@ const onLookPanel = (item) => {
   width: 500px;
   max-width: 80vw;
   height: fit-content;
-  padding: 12px;
-  min-height: 200px;
+  padding: 12px 28px;
+  min-height: 250px;
   border-radius: 8px;
   background-color: rgba(106, 123, 252, 0.13);
   border: 2px solid rgb(125, 140, 255);
@@ -198,6 +212,9 @@ const onLookPanel = (item) => {
     display: block;
     font-size: 15px;
     margin: 6px 0;
+    &:hover{
+      text-decoration: underline;
+    }
   }
 }
 @keyframes popup {
