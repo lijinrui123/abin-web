@@ -32,13 +32,11 @@ body {
   align-items: center;
 }
 
-#app{
-  &::-webkit-scrollbar {
-      width: 5px;
-      background-color: #ff5a00;
-    }
-    &::-webkit-scrollbar-thumb{
-      width: 5px;
-      background: yellow;
-    }
+#app::-webkit-scrollbar {
+  width: 5px;
+  background-color: #ff5a00;
+}
+#app::-webkit-scrollbar-thumb{
+  width: 5px;
+  background: yellow;
 }
