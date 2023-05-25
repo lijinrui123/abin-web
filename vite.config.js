@@ -4,14 +4,16 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base:'/abin-web/',
-  plugins: [vue()],
+  base: '/abin-web/',
+  plugins: [
+    vue()
+  ],
   css: {
-      preprocessorOptions: {
-          scss: {
-              additionalData: "@import 'src/assets/sass/common.scss';@import 'src/assets/sass/theme.scss';@import 'src/assets/sass/layout.scss';",
-          },
+    preprocessorOptions: {
+      scss: {
+        additionalData: "@import 'src/assets/sass/common.scss';@import 'src/assets/sass/theme.scss';@import 'src/assets/sass/layout.scss';",
       },
+    },
   },
   resolve: {
     alias: {

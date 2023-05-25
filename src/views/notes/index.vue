@@ -147,7 +147,7 @@ const onLookPanel = (item) => {
   font-size: 18px;
   color: #333333;
   font-family: inherit;
-  font-weight: 800;
+  font-weight: 400;
   cursor: pointer;
   position: relative;
   border: none;

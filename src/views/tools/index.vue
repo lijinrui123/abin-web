@@ -507,7 +507,7 @@ const toNav = (index) => {
 .navigation-tools {
   position: fixed;
   width: fit-content;
-  height: 300px;
+  height: fit-content;
   max-height: calc(100% - 110px);
   padding: 8px 0;
   box-sizing: border-box;

@@ -1,21 +1,4 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    overflow: hidden;
-}
-
-a{
-    text-decoration: none;
-    color: #000000d9;
-    &:hover{
-        color: #1890ff;
-    }
-}
-
-
+@import "./theme.scss";
 $--color-text-primary: #677c91 !default;
 $--color-text-primary-hover: #7196fe !default;
 $--color-text-title: #353535 !default;
@@ -182,4 +165,36 @@ body {
 
 :deep(.el-card.is-always-shadow) {
     box-shadow: none;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: #000000d9;
+    &:hover{
+        color: #1890ff;
+    }
+}
+
+// 内容面板公共样式
+.box {
+    width: 1080px;
+    min-height: 80vh;
+    padding: 16px;
+    margin: 0 auto;
+    border-radius: 8px;
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    background-color: $--color-box;
 }
