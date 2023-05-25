@@ -11,7 +11,7 @@
         </dd>
       </dl>
     </div>
-    <div class="box">
+    <div class="tools-box">
       <section v-for="(tool, index) in list">
         <header :id="tool.id">{{ tool.name }}</header>
         <a target="_blank" class="tool-item" v-for="link in tool.collection" :key="link.link" :href="link.link"
@@ -537,7 +537,7 @@ const toNav = (index) => {
     }
   }
 }
-.box {
+.tools-box {
   width: 1080px;
   min-height: 800px;
   margin: 0 auto;
@@ -593,7 +593,7 @@ const toNav = (index) => {
     //   display: flex;
     // }
   }
-  .box{
+  .tools-box{
     // margin-top: 100px;
     section{
       padding: 58px 16px 16px 16px;
