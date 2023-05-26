@@ -43,7 +43,7 @@
       </div>
     </a>
     <a class="game-item" target="_blank" href="https://2020game.io/">
-      <img src="http://www.cxy521.com/static/img/index/relax/2020.png" alt="" class="game-logo">
+      <img src="@/assets/icons/11.png" alt="" class="game-logo">
       <div class="game-info">
         <div class="game-title">2000游戏</div>
         <div class="game-desc">重点推荐，闯关类游戏！</div>
@@ -57,21 +57,21 @@
       </div>
     </a>
     <a class="game-item" target="_blank" href="http://www.itmind.net/tetris/">
-      <img src="http://www.cxy521.com/static/img/index/relax/tetris.jpg" alt="" class="game-logo">
+      <img src="@/assets/icons/12.png" alt="" class="game-logo">
       <div class="game-info">
         <div class="game-title">俄罗斯方块</div>
         <div class="game-desc">经典俄罗斯方块网页版</div>
       </div>
     </a>
     <a class="game-item" target="_blank" href="https://lines.frvr.com/">
-      <img src="http://www.cxy521.com/static/img/index/relax/playLinesFrvr.png" alt="" class="game-logo">
+      <img src="@/assets/icons/13.png" alt="" class="game-logo">
       <div class="game-info">
         <div class="game-title">连线游戏</div>
         <div class="game-desc">一款轻松的益智在线小游戏，游戏主要的玩法就是让相同颜色两点之间连上线段，并且还要保证要经过游戏界面中的每一个小白点，玩家根据图中的画线方式连接即可轻松过关。</div>
       </div>
     </a>
     <a class="game-item" target="_blank" href="http://www.heyzxz.me/pcol/">
-      <img src="http://www.cxy521.com/static/img/index/relax/heyzxz.png" alt="" class="game-logo">
+      <img src="@/assets/icons/14.png" alt="" class="game-logo">
       <div class="game-info">
         <div class="game-title">沉浸式3D台球</div>
         <div class="game-desc">在线台球游戏，画质很精美</div>
@@ -148,4 +148,15 @@ const isLocal = location.hostname === 'localhost'
       margin-top: 5px;
     }
   }
-}</style>
+}
+@media (max-width: 480px) {
+  .box{
+    padding: 8px;
+    justify-content: center;
+    .game-item{
+      width: 100%;
+      margin: 5px 0;
+    }
+  }
+}
+</style>

@@ -2,7 +2,7 @@
   <div class="box">
     <a class="relax-item" target="_blank" href="https://bruno-simon.com/">
       <fish>
-        <img src="http://www.cxy521.com/static/img/index/relax/simon.png" alt="" class="game-logo">
+        <img src="@/assets/icons/icon3.png" alt="" class="game-logo">
         <div class="game-info">
           <div class="game-title">网页开车</div>
           <div class="game-desc">控制模拟的遥控车在地图上随意行驶，十分解压</div>
@@ -11,7 +11,7 @@
     </a>
     <a class="relax-item" target="_blank" href="https://fishpi.cn/">
       <fish>
-        <img src="http://www.cxy521.com/static/img/index/relax/mp.png" alt="" class="game-logo">
+        <img src="@/assets/icons/icon4.png" alt="" class="game-logo">
         <div class="game-info">
           <div class="game-title">摸鱼派</div>
           <div class="game-desc">一个以程序员,设计师和极客为核心的社区</div>
@@ -20,7 +20,7 @@
     </a>
     <a class="relax-item" target="_blank" href="https://strobe.cool/">
       <fish>
-        <img src="http://www.cxy521.com/static/img/index/relax/strobe.ico" alt="" class="game-logo">
+        <img src="@/assets/icons/icon5.png" alt="" class="game-logo">
         <div class="game-info">
           <div class="game-title">扭曲世界</div>
           <div class="game-desc">你周围的世界会改变形状，显得扭曲和变形。</div>
@@ -29,7 +29,7 @@
     </a>
     <a class="relax-item" target="_blank" href="https://adarkroom.doublespeakgames.com/?lang=zh_cn">
       <fish>
-        <img src="http://www.cxy521.com/static/img/index/relax/adr.png" alt="" class="game-logo">
+        <img src="@/assets/icons/icon6.png" alt="" class="game-logo">
         <div class="game-info">
           <div class="game-title">暗室</div>
           <div class="game-desc">适用于浏览器的极简文字冒险游戏</div>
@@ -38,7 +38,7 @@
     </a>
     <a class="relax-item" target="_blank" href="https://adarkroom.doublespeakgames.com/?lang=zh_cn">
       <fish>
-        <img src="http://www.cxy521.com/static/img/index/relax/fwebhek.ico" alt="" class="game-logo">
+        <img src="@/assets/icons/icon7.png" alt="" class="game-logo">
         <div class="game-info">
           <div class="game-title">神笔马良</div>
           <div class="game-desc">小人历险记-创作型游戏 </div>
@@ -47,7 +47,7 @@
     </a>
     <a class="relax-item" target="_blank" href="https://zoom.earth/">
       <fish>
-        <img src="http://www.cxy521.com/static/img/index/relax/earth.ico" alt="" class="game-logo">
+        <img src="@/assets/icons/icon8.png" alt="" class="game-logo">
         <div class="game-info">
           <div class="game-title">地球卫星</div>
           <div class="game-desc">通过地图来检测区域天气、地形</div>
@@ -56,7 +56,7 @@
     </a>
     <a class="relax-item" target="_blank" href="https://bellwoods.xyz/">
       <fish>
-        <img src="http://www.cxy521.com/static/img/index/relax/bellwoods.png" alt="" class="game-logo">
+        <img src="@/assets/icons/icon9.png" alt="" class="game-logo">
         <div class="game-info">
           <div class="game-title">在线放风筝</div>
           <div class="game-desc">移动鼠标可以让风筝飞翔，伴随着音乐</div>
@@ -75,7 +75,7 @@
     </a>
     <a class="relax-item" target="_blank" href="http://www.staggeringbeauty.com/">
       <fish>
-        <img src="http://www.cxy521.com/static/img/index/relax/yaoyao.png" alt="" class="game-logo">
+        <img src="@/assets/icons/icon10.png" alt="" class="game-logo">
         <div class="game-info">
           <div class="game-title">魔性摇摇乐</div>
           <div class="game-desc">魔性解压网站，急速晃动还会闪亮你的眼</div>
@@ -164,7 +164,7 @@ $--footerHeight: 160px;
   position: relative;
   z-index: 1;
   width: 200px;
-  height: 110px;
+  height: 104px;
   padding: 10px;
   margin: 12px 50px 0 12px;
   border-radius: 6px;
@@ -223,7 +223,7 @@ $--footerHeight: 160px;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
-      margin-top: 5px;
+      margin-top: 2px;
     }
   }
 }
@@ -325,6 +325,15 @@ $--footerHeight: 160px;
 
   100% {
     transform: translateY(-100vh) translateX(100px);
+  }
+}
+
+@media (max-width: 480px) {
+  .box{
+    justify-content: center;
+    .relax-item{
+      margin: 5px 0;
+    }
   }
 }
 </style>

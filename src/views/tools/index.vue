@@ -28,6 +28,42 @@ import { ref } from 'vue'
 
 import icon1 from "@/assets/icons/icon1.png";
 import icon2 from "@/assets/icons/icon2.png";
+import icon15 from "@/assets/icons/15.png";
+import icon16 from "@/assets/icons/16.png";
+import icon17 from "@/assets/icons/17.png";
+import icon18 from "@/assets/icons/18.png";
+import icon19 from "@/assets/icons/19.png";
+import icon20 from "@/assets/icons/20.png";
+import icon21 from "@/assets/icons/21.png";
+import icon22 from "@/assets/icons/22.png";
+import icon23 from "@/assets/icons/23.png";
+import icon24 from "@/assets/icons/24.png";
+import icon25 from "@/assets/icons/25.png";
+import icon26 from "@/assets/icons/26.png";
+import icon27 from "@/assets/icons/27.png";
+import icon28 from "@/assets/icons/28.png";
+import icon29 from "@/assets/icons/29.png";
+import icon30 from "@/assets/icons/30.png";
+import icon31 from "@/assets/icons/31.png";
+import icon32 from "@/assets/icons/32.png";
+import icon33 from "@/assets/icons/33.png";
+import icon34 from "@/assets/icons/34.png";
+import icon35 from "@/assets/icons/35.png";
+import icon36 from "@/assets/icons/36.png";
+import icon37 from "@/assets/icons/37.png";
+import icon38 from "@/assets/icons/38.png";
+import icon39 from "@/assets/icons/39.png";
+import icon40 from "@/assets/icons/40.png";
+import icon41 from "@/assets/icons/41.png";
+import icon42 from "@/assets/icons/42.png";
+import icon43 from "@/assets/icons/43.png";
+import icon44 from "@/assets/icons/44.png";
+import icon45 from "@/assets/icons/45.png";
+import icon46 from "@/assets/icons/46.png";
+import icon47 from "@/assets/icons/47.png";
+import icon48 from "@/assets/icons/48.png";
+import icon49 from "@/assets/icons/49.png";
+import icon50 from "@/assets/icons/50.png";
 
 const list = ref([
 {
@@ -55,7 +91,7 @@ const list = ref([
         link: 'https://www.hlcode.cn/'
       },
       {
-        icon: 'https://www.jsons.cn/favicon.ico',
+        icon: icon15,
         name: '正则表达式测试',
         link: 'http://www.jsons.cn/reg/'
       },
@@ -65,7 +101,7 @@ const list = ref([
         link: 'https://any86.github.io/any-rule/'
       },
       {
-        icon: 'http://www.cxy521.com/static/img/index/tool/convertio.ico',
+        icon: icon16,
         name: '文件格式转换',
         link: 'https://convertio.co/zh/'
       },
@@ -75,17 +111,17 @@ const list = ref([
         link: 'https://www.aconvert.com/cn/audio/'
       },
       {
-        icon: 'http://www.cxy521.com/static/img/index/tool/zf.png',
+        icon: icon17,
         name: '中文简繁体转换',
         link: 'https://tool.lu/zhconvert'
       },
       {
-        icon: 'http://www.cxy521.com/static/img/index/resources/wd.ico',
+        icon: icon18,
         name: '字数统计',
         link: 'https://www.eteste.com/'
       },
       {
-        icon: 'http://www.cxy521.com/static/img/index/tool/epochConverter.jpg',
+        icon: icon19,
         name: '时间戳转换',
         link: 'https://www.epochconverter.com/'
       },
@@ -116,12 +152,12 @@ const list = ref([
         link: 'https://www.toptal.com/developers/css/sprite-generator'
       },
       {
-        icon: 'http://www.cxy521.com/static/img/index/image/tutieshi.ico',
+        icon: icon20,
         name: '视频转GIF',
         link: 'https://www.tutieshi.com/'
       },
       {
-        icon: 'http://www.cxy521.com/static/img/index/image/51tools.ico',
+        icon: icon21,
         name: '在线SVG制作',
         link: 'https://51tools.info/svg/'
       },
@@ -141,77 +177,72 @@ const list = ref([
         link: 'https://www.remove.bg/zh'
       },
       {
-        icon: 'http://www.cxy521.com/static/img/index/image/iloveimg.png',
+        icon: icon22,
         name: '图片在线编辑',
         link: 'https://www.iloveimg.com/zh-cn'
       },
       {
-        icon: 'http://www.cxy521.com/static/img/index/image/gaoding.ico',
+        icon: icon23,
         name: '在线PS',
         link: 'https://www.uupoop.com/#/'
       },
       {
-        icon: 'http://www.cxy521.com/static/img/index/image/onlinedo.ico',
+        icon: icon24,
         name: '图片加水印',
         link: 'https://www.onlinedo.cn/img-shuiyin'
       },
       {
-        icon: 'http://www.cxy521.com/static/img/index/image/apowersoft.ico',
+        icon: icon25,
         name: '图片去水印',
         link: 'https://www.apowersoft.cn/image-watermark-remover'
       },
       {
-        icon: 'http://www.cxy521.com/static/img/index/image/zuohaotu.ico',
+        icon: icon26,
         name: '图片合并切割',
         link: 'http://www.zuohaotu.com/'
       },
       {
-        icon: 'http://www.cxy521.com/static/img/index/image/ico51.ico',
+        icon: icon27,
         name: '生成透明Icon',
         link: 'http://www.ico51.cn/'
       },
       {
-        icon: 'http://www.cxy521.com/static/img/index/image/designevo.ico',
+        icon: icon28,
         name: 'logo设计',
         link: 'https://www.designevo.com/cn/logo-maker/'
       },
       {
-        icon: 'http://www.cxy521.com/static/img/index/image/zhuang.png',
+        icon: icon29,
         name: '搞怪图片生成',
         link: 'https://c.tianhezulin.com/'
       },
       {
-        icon: 'http://www.cxy521.com/static/img/index/image/fabiaoqing.png',
+        icon: icon30,
         name: '表情包',
         link: 'https://www.fabiaoqing.com/'
       },
       {
-        icon: 'http://www.cxy521.com/static/img/index/image/biaoqingbao.ico',
+        icon: icon31,
         name: '表情包制作器',
         link: 'https://www.wakatool.com/maker'
       },
       {
-        icon: '	http://www.cxy521.com/static/img/index/image/photomosh.ico',
+        icon: icon32,
         name: '朋克图片生成器',
         link: 'https://photomosh.com/'
       },
       {
-        icon: '	http://www.cxy521.com/static/img/index/image/photomosh.ico',
-        name: '朋克图片生成器',
-        link: 'https://photomosh.com/'
-      },
-      {
-        icon: 'http://www.cxy521.com/static/img/index/image/pexels.ico',
+        icon: icon33,
         name: 'Pexels图片素材',
         link: 'https://www.pexels.com/zh-cn/'
       },
       {
-        icon: 'http://www.cxy521.com/static/img/index/image/pixabay.png',
+        icon: icon34,
         name: 'Pixabay图片素材',
         link: 'https://pixabay.com/'
       },
       {
-        icon: 'http://www.cxy521.com/static/img/index/image/pxhere.png',
+        icon: icon35,
         name: 'Pxhere图片素材',
         link: 'https://pxhere.com/'
       },
@@ -257,7 +288,7 @@ const list = ref([
         link: 'https://box-shadow.art/'
       },
       {
-        icon: 'http://tools.jb51.net/favicon.ico',
+        icon: icon36,
         name: '在线clip-path',
         link: 'http://tools.jb51.net/code/css3path'
       },
@@ -298,7 +329,7 @@ const list = ref([
         link: 'https://www.handsome-css.com/buttons'
       },
       {
-        icon: 'http://www.bootstrapmb.com/content/images/fav.png',
+        icon: icon37,
         name: 'css动画',
         link: 'http://www.bootstrapmb.com/tag/cssdonghua'
       },
@@ -362,17 +393,17 @@ const list = ref([
     name: 'Chrome插件',
     collection: [
       {
-        icon: 'http://www.cxy521.com/static/img/index/chrome/onetab.jpg',
+        icon: icon38,
         name: 'OneTab标签管理',
         link: 'https://chrome.google.com/webstore/category/extensions?hl=zh-CN'
       },
       {
-        icon: '	http://www.cxy521.com/static/img/index/chrome/fe.png',
+        icon: icon39,
         name: '前端助手插件',
         link: 'http://www.itmind.net/1470.html'
       },
       {
-        icon: 'http://www.cxy521.com/static/img/index/chrome/postman.svg',
+        icon: icon40,
         name: 'Postman网页版',
         link: 'http://www.itmind.net/1334.html'
       },
@@ -387,17 +418,17 @@ const list = ref([
         link: 'https://www.0z.gs/webDevelopment/1736.html'
       },
       {
-        icon: 'http://www.cxy521.com/static/img/icon/github.jpg',
+        icon: icon41,
         name: 'GitHub加速插件',
         link: 'http://www.itmind.net/217.html'
       },
       {
-        icon: 'http://www.cxy521.com/static/img/index/chrome/video.jpg',
+        icon: icon42,
         name: '视频下载插件',
         link: 'http://www.itmind.net/3092.html'
       },
       {
-        icon: 'http://www.cxy521.com/static/img/icon/vue.png',
+        icon: icon43,
         name: 'Vue.js devtools',
         link: 'http://www.itmind.net/6438.html'
       }
@@ -413,22 +444,22 @@ const list = ref([
         link: 'https://marketplace.visualstudio.com/items?itemName=techer.open-in-browser'
       },
       {
-        icon: 'http://www.cxy521.com/static/img/index/vscode/git_graph.jpg',
+        icon: icon44,
         name: 'Git Graph',
         link: 'https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph'
       },
       {
-        icon: 'http://www.cxy521.com/static/img/index/vscode/GitLens.jpg',
+        icon: icon45,
         name: 'GitLens',
         link: 'https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens'
       },
       {
-        icon: 'http://www.cxy521.com/static/img/index/vscode/git_history.jpg',
+        icon: icon46,
         name: 'Git History',
         link: 'https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory'
       },
       {
-        icon: 'http://www.cxy521.com/static/img/index/vscode/git_blame.jpg',
+        icon: icon47,
         name: 'Git Blame',
         link: 'https://marketplace.visualstudio.com/items?itemName=waderyan.gitblame'
       },
@@ -453,17 +484,17 @@ const list = ref([
         link: 'https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag'
       },
       {
-        icon: 'http://www.cxy521.com/static/img/index/vscode/beautify.jpg',
+        icon: icon48,
         name: '代码美化',
         link: 'https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify'
       },
       {
-        icon: 'http://www.cxy521.com/static/img/index/vscode/bookmarks.jpg',
+        icon: icon49,
         name: '代码书签',
         link: 'https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks'
       },
       {
-        icon: '	http://www.cxy521.com/static/img/index/vscode/fileSize.jpg',
+        icon: icon50,
         name: 'FileSize',
         link: 'https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks'
       },
@@ -600,7 +631,7 @@ const toNav = (index) => {
     // }
   }
   .tools-box{
-    // margin-top: 100px;
+    width: unset;
     section{
       padding: 58px 16px 16px 16px;
       header{

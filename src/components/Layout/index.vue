@@ -5,7 +5,7 @@
     <router-link class="navigation-link" to="games">游戏</router-link>
     <router-link class="navigation-link" to="relax">摸鱼</router-link>
     <router-link class="navigation-link" to="demos">样例</router-link>
-    <router-link class="navigation-link" to="links">友链</router-link>
+    <router-link class="navigation-link navigation-link-pc" to="links">友链</router-link>
   </header>
   <main class="content">
     <router-view v-slot="{ Component, route }">
@@ -119,4 +119,11 @@ footer {
   footer {
     display: none;
   }
-}</style>
+}
+@media (max-width: 480px) {
+  .navigation-link-pc{
+    display: none !important;
+  }
+}
+
+</style>
