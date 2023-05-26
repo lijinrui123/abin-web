@@ -21,6 +21,20 @@
         <div class="game-desc">小鸟很愤怒，后果很严重～</div>
       </div>
     </a>
+    <a class="game-item" target="_blank" href="https://edition.cnn.com/interactive/2021/03/cnnix-steership/">
+      <img src="https://edition.cnn.com/favicon.ico" alt="" class="game-logo">
+      <div class="game-info">
+        <div class="game-title">走出大运河</div>
+        <div class="game-desc">上帝视角操作轮船走出大运河！</div>
+      </div>
+    </a>
+    <a class="game-item" target="_blank" href="https://www.yikm.net/">
+      <img src="https://img1.baidu.com/it/u=2482939586,277649298&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500" alt="" class="game-logo">
+      <div class="game-info">
+        <div class="game-title">小霸王游戏厅</div>
+        <div class="game-desc">小霸王，其乐无穷 。红白机，FC在线游戏，街机游戏，街机在线，NES games，NES games online，Super Mario</div>
+      </div>
+    </a>
     <a class="game-item" target="_blank" href="http://www.itmind.net/xbw/">
       <img src="@/assets/games/logo-300game.png" alt="" class="game-logo">
       <div class="game-info">
@@ -28,6 +42,49 @@
         <div class="game-desc">童年的味道～啊，真香</div>
       </div>
     </a>
+    <a class="game-item" target="_blank" href="https://2020game.io/">
+      <img src="http://www.cxy521.com/static/img/index/relax/2020.png" alt="" class="game-logo">
+      <div class="game-info">
+        <div class="game-title">2000游戏</div>
+        <div class="game-desc">重点推荐，闯关类游戏！</div>
+      </div>
+    </a>
+    <a class="game-item" target="_blank" href="https://yzyx.info/">
+      <img src="https://yzyx.info/images/favicon.png" alt="" class="game-logo">
+      <div class="game-info">
+        <div class="game-title">益智游戏</div>
+        <div class="game-desc">魔性解压网站，急速晃动还会闪亮你的眼</div>
+      </div>
+    </a>
+    <a class="game-item" target="_blank" href="http://www.itmind.net/tetris/">
+      <img src="http://www.cxy521.com/static/img/index/relax/tetris.jpg" alt="" class="game-logo">
+      <div class="game-info">
+        <div class="game-title">俄罗斯方块</div>
+        <div class="game-desc">经典俄罗斯方块网页版</div>
+      </div>
+    </a>
+    <a class="game-item" target="_blank" href="https://lines.frvr.com/">
+      <img src="http://www.cxy521.com/static/img/index/relax/playLinesFrvr.png" alt="" class="game-logo">
+      <div class="game-info">
+        <div class="game-title">连线游戏</div>
+        <div class="game-desc">一款轻松的益智在线小游戏，游戏主要的玩法就是让相同颜色两点之间连上线段，并且还要保证要经过游戏界面中的每一个小白点，玩家根据图中的画线方式连接即可轻松过关。</div>
+      </div>
+    </a>
+    <a class="game-item" target="_blank" href="http://www.heyzxz.me/pcol/">
+      <img src="http://www.cxy521.com/static/img/index/relax/heyzxz.png" alt="" class="game-logo">
+      <div class="game-info">
+        <div class="game-title">沉浸式3D台球</div>
+        <div class="game-desc">在线台球游戏，画质很精美</div>
+      </div>
+    </a>
+    <a class="game-item" target="_blank" href="https://beta.deeeep.io/?host=BPIx93">
+      <img src="https://beta.deeeep.io/favicon-32x32.png" alt="" class="game-logo">
+      <div class="game-info">
+        <div class="game-title">深海鱼求生</div>
+        <div class="game-desc">你是一条鱼，能活多久？</div>
+      </div>
+    </a>
+    
   </div>
 </template>
 
@@ -52,6 +109,9 @@ const isLocal = location.hostname === 'localhost'
   cursor: pointer;
   &:hover{
     background: #f2f8fd;
+    .game-title{
+      color: #ee521c !important;
+    }
   }
 
   .game-logo {

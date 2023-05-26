@@ -128,7 +128,7 @@ const onLookPanel = (item) => {
 .box {
   width: 1080px;
   min-height: 80vh;
-  padding: 16px;
+  padding: 20px 40px;
   margin: 0 auto;
   border-radius: 8px;
   display: flex;
