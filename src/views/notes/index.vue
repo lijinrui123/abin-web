@@ -2,16 +2,24 @@
   <div class="page"  @click="showPanel = false">
 
     <div class="box">
-      <div class="item-box" v-for="item in list" :key="item.id" @click.stop="onLookPanel(item)">
-        <span class="item">{{ item.name }}</span>
+      <div class="item-box" v-for="item in list" :key="item.id">
+        <div class="item"  @click.stop="onLookPanel(item)">
+          <span class="actual-text">&nbsp;&nbsp;{{ item.name }}&nbsp;&nbsp;</span>
+          <span class="hover-text" aria-hidden="true">&nbsp;&nbsp;{{ item.name }}&nbsp;&nbsp;</span>
       </div>
+      </div>
+      
+      
+      <!-- <div class="item-box" v-for="item in list" :key="item.id" @click.stop="onLookPanel(item)">
+        <span class="item">{{ item.name }}</span>
+      </div> -->
     </div>
 
     <div class="popup" v-if="showPanel" @click.stop>
-      <h3>{{  activeDocs.name }}</h3>
+      <h3>【 {{  activeDocs.name }} 】</h3>
       <p>官方文档</p>
-      <a :href="link1.link" target="_blank" v-for="link1 in activeDocs.official" :key="link1.link">{{  link1.name }}</a>
-      <p v-if="activeDocs.others.length">相关文档</p>
+      <a :href="link1.link" target="_blank" v-for="(link1,link1Index) in activeDocs.official" :key="link1.link">{{  link1.name?link1.name:`${activeDocs.name} 官方文档${link1Index + 1}` }}</a>
+      <p v-if="activeDocs.others && activeDocs.others.length">相关文档</p>
       <a :href="link2.link" target="_blank" v-for="link2 in activeDocs.others" :key="link2.link">{{  link2.name }}</a>
     </div>
   </div>
@@ -22,36 +30,15 @@ import { nextTick, ref } from "vue";
 
 const list = ref([
 {
-    id: 'jquery',
-    name: 'jquery',
+    id: 'animate.js',
+    name: 'Animate.js',
     official: [{
-      link: 'https://www.w3school.com.cn/jquery/index.asp',
-      name: 'jQuery w3school教程'
-    }],
-    others: [{
-      link: 'http://hemin.cn/jq/',
-      name: 'jQuery 1.12.1 API速查表'
-    }]
-},{
-    id: 'canvas',
-    name: 'canvas',
-    official: [{
-      link: 'https://www.w3school.com.cn/tags/html_ref_canvas.asp',
-      name: 'HTML Canvas 参考手册(w3school)'
-    }],
-    others: [{
-      link: 'https://www.runoob.com/w3cnote/html5-canvas-intro.html',
-      name: '学习 HTML5 Canvas 这一篇文章就够了'
-    }]
-},{
-    id: 'vite',
-    name: 'vite',
-    official: [{
-      link: 'https://cn.vitejs.dev/config/',
-      name: 'vite官方中文文档'
+      link: 'http://www.animate.net.cn/',
+      name: 'Animate中文网'
     }],
     others: []
-},{
+},
+{
     id: 'anime.js',
     name: 'anime.js',
     official: [{
@@ -62,29 +49,36 @@ const list = ref([
       name: 'github'
     }],
     others: []
-},{
-    id: 'unocss',
-    name: 'unocss',
+},
+{
+    id: 'antd',
+    name: 'antd',
     official: [{
-      link: 'https://unocss.dev/integrations/vite',
-      name: 'https://unocss.dev/integrations/vite'
-    }],
-    others: [{
-      link: 'https://juejin.cn/post/7129153610855743525',
-      name: '新一代原子化引擎 unocss'
-    },{
-      link: 'https://juejin.cn/post/7161967494905724942#heading-17',
-      name: '原子化CSS引擎UnoCSS'
-    }]
-},{
-    id: '腾讯云trtc',
-    name: '腾讯云trtc',
-    official: [{
-      link: 'https://cloud.tencent.com/document/product/647/17249',
-      name: '腾讯云trtc web端API文档'
+      link: 'https://ant.design/components/overview-cn',
+      name: 'Ant Design官方文档'
     }],
     others: []
-},{
+},
+{
+    id: 'ArcoDesign',
+    name: 'ArcoDesign',
+    icon: 'https://unpkg.byted-static.com/byted/arco-config/1.0.11/assets/arco_arcopro.ico',
+    official: [{
+      link: 'https://pro.arco.design/',
+      name: 'ArcoDesign Pro官方文档'
+    }],
+    others: []
+},
+{
+    id: 'Annie2x',
+    name: 'Annie2x',
+    official: [{
+      link: 'http://annie2x.com/',
+      name: 'Annie2x官网'
+    }],
+    others: []
+},
+{
     id: 'a标签',
     name: 'a标签协议',
     official: [{
@@ -97,6 +91,287 @@ const list = ref([
     },{
       link: 'https://blog.csdn.net/sipallan/article/details/51049925',
       name: 'html <a>标签属性总结'
+    }]
+},
+{
+    id: 'canvas',
+    name: 'canvas',
+    official: [{
+      link: 'https://www.w3school.com.cn/tags/html_ref_canvas.asp',
+      name: 'HTML Canvas 参考手册(w3school)'
+    }],
+    others: [{
+      link: 'https://www.runoob.com/w3cnote/html5-canvas-intro.html',
+      name: '学习 HTML5 Canvas 这一篇文章就够了'
+    }]
+},
+{
+    id: 'createjs',
+    name: 'create.js',
+    official: [{
+      link: 'https://createjs.com/',
+      name: 'createjs 官方文档'
+    }]
+},
+{
+    id: 'cocos',
+    name: 'cocos',
+    official: [{
+      link: 'https://docs.cocos.com/creator/manual/zh/',
+      name: 'cocos 官方文档'
+    },
+    {
+      link: 'https://www.bookstack.cn/read/creator3d-1.2/%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8.md',
+      name: 'Cocos Creator 3D 用户手册'
+    }],
+    others: [{
+      link: 'https://docs.cocos.com/creator3d/api/zh/modules/event.html',
+      name: 'Creator3dAPI API文档'
+    }]
+},
+{
+    id: 'Color-UI',
+    name: 'Color-UI',
+    official: [{
+      link: 'http://demo.color-ui.com/',
+      name: ''
+    }],
+    others: []
+},
+{
+    id: 'Element',
+    name: 'Element',
+    icon: 'https://element-plus.gitee.io/images/element-plus-logo.svg',
+    official: [{
+      link: 'https://element.eleme.cn/#/zh-CN/component/layout',
+      name: 'element UI 2.x 官方文档'
+    }],
+    others: []
+},
+{
+    id: 'Element-Plus',
+    name: 'Element-Plus',
+    icon: 'https://element-plus.gitee.io/images/element-plus-logo.svg',
+    official: [{
+      link: 'https://element-plus.gitee.io/zh-CN/component/button.html',
+      name: 'element-plus 官方文档'
+    }]
+},
+{
+    id: 'Echarts',
+    name: 'Echarts',
+    icon: 'https://echarts.apache.org/zh/images/favicon.png',
+    official: [{
+      link: 'https://echarts.apache.org/zh/index.html',
+      name: 'Echarts 官方文档'
+    }]
+},
+{
+    id: 'iScroll',
+    name: 'iScroll',
+    icon: 'https://iscrolljs.com/wp-content/uploads/2021/04/fav_iscrolljs_iGq_icon.ico',
+    official: [{
+      link: 'https://iscrolljs.com/',
+      name: 'iScroll 官网'
+    },{
+        link: 'http://caibaojian.com/iscroll-5/gettingstart.html',
+        name: 'iScroll 官方文档'
+      }],
+},
+{
+    id: 'jquery',
+    name: 'jquery',
+    official: [{
+      link: 'https://www.w3school.com.cn/jquery/index.asp',
+      name: 'jQuery w3school教程'
+    }],
+    others: [{
+      link: 'http://hemin.cn/jq/',
+      name: 'jQuery 1.12.1 API速查表'
+    }]
+},
+{
+    id: 'MUI',
+    name: 'MUI',
+    icon: 'https://dev.dcloud.net.cn/mui/favicon.ico',
+    official: [{
+      link: 'https://dev.dcloud.net.cn/mui/ui/',
+      name: ''
+    }]
+},
+{
+    id: 'Mint-ui',
+    name: 'Mint-ui',
+    official: [{
+      link: 'http://mint-ui.github.io/docs/#/',
+      name: ''
+    }]
+},
+{
+    id: 'Pixi.js',
+    name: 'Pixi.js',
+    official: [{
+      link: 'http://pixijs.huashengweilai.com/guide/start/1.introduction.html',
+      name: 'PixiJS中文网'
+    }]
+},
+{
+    id: 'three.js',
+    name: 'three.js',
+    official: [{
+      link: 'http://www.webgl3d.cn/',
+      name: 'Three.js中文网'
+    }],
+    others: []
+},
+{
+    id: 'tinymce',
+    name: 'tinymce',
+    official: [{
+      link: 'http://tinymce.ax-z.cn/',
+      name: 'tiny中文文档'
+    }],
+    others: []
+},
+{
+    id: 'Typescript',
+    name: 'Typescript',
+    official: [{
+      link: 'http://typescript.p2hp.com/',
+      name: 'typescript中文文档'
+    }],
+    others: []
+},
+{
+    id: 'Tailwind',
+    name: '腾讯云trtc',
+    official: [{
+      link: 'https://www.tailwindcss.cn/',
+      name: 'tailwindcss官网'
+    }],
+    others: [{
+      link: 'https://juejin.cn/post/7231539903649398843',
+      name: '《快速掌握 Tailwind：最流行的原子化 CSS 框架》'
+    }]
+},
+{
+    id: '腾讯云trtc',
+    name: '腾讯云trtc',
+    official: [{
+      link: 'https://cloud.tencent.com/document/product/647/17249',
+      name: '腾讯云trtc web端API文档'
+    }],
+    others: []
+},
+{
+    id: 'uView',
+    name: 'uView',
+    official: [{
+      link: 'https://www.uviewui.com/',
+      name: ''
+    }],
+    others: []
+},
+{
+    id: 'vue2',
+    name: 'vue2',
+    official: [{
+      link: 'https://v2.cn.vuejs.org/',
+      name: ''
+    }],
+    others: []
+},
+{
+    id: 'vue3',
+    name: 'vue3',
+    official: [{
+      link: 'https://cn.vuejs.org/',
+      name: ''
+    }],
+    others: [{
+      link: 'https://www.javascriptc.com/vue3js/guide/introduction.html',
+      name: 'vue3中文文档'
+    }]
+},
+{
+    id: 'vite',
+    name: 'vite',
+    official: [{
+      link: 'https://cn.vitejs.dev/config/',
+      name: 'vite官方中文文档'
+    }],
+    others: []
+},
+{
+    id: 'vant',
+    name: 'vant',
+    official: [{
+      link: 'https://gitee.com/vant-contrib/vant#http://vant-contrib.gitee.io/vant-weapp',
+      name: 'github仓库地址'
+    },{
+      link: 'https://vant-contrib.gitee.io/vant/v2/#/zh-CN/',
+      name: 'vant2 vue2版本中文文档'
+    },{
+      link: 'https://www.w3cschool.cn/vantlesson/vantlesson-htl635uq.html',
+      name: 'vant2 vue2版本中文文档'
+    },{
+      link: 'https://vant-contrib.gitee.io/vant/#/zh-CN',
+      name: 'vant4 vue3版本中文文档'
+    },{
+      link: 'https://vant-contrib.gitee.io/vant-weapp/#/home',
+      name: 'vant 小程序版本中文文档'
+    }],
+    others: []
+},
+{
+    id: 'VueQuill',
+    name: 'VueQuill',
+    official: [{
+      link: 'https://vueup.github.io/vue-quill/guide/',
+      name: ''
+    }]
+},
+{
+    id: 'vue-quill-editor',
+    name: 'vue-quill-editor',
+    official: [{
+      link: 'https://www.npmjs.com/package/vue-quill-editor',
+      name: ''
+    }
+      ,{
+      link: 'https://www.kancloud.cn/liuwave/quill/1409423',
+      name: 'Quil富文本编辑器官方中文文档'
+    }]
+},
+{
+    id: 'webpack',
+    name: 'webpack',
+    official: [{
+      link: 'https://www.webpackjs.com/concepts/',
+      name: 'webpack中文文档'
+    }]
+},
+{
+    id: '微信开发文档',
+    name: '微信开发文档',
+    official: [{
+      link: 'https://developers.weixin.qq.com/miniprogram/dev/framework/',
+      name: '微信小程序开发文档'
+    }]
+},
+{
+    id: 'unocss',
+    name: 'unocss',
+    official: [{
+      link: 'https://unocss.dev/integrations/vite',
+      name: 'https://unocss.dev/integrations/vite'
+    }],
+    others: [{
+      link: 'https://juejin.cn/post/7129153610855743525',
+      name: '新一代原子化引擎 unocss'
+    },{
+      link: 'https://juejin.cn/post/7161967494905724942#heading-17',
+      name: '原子化CSS引擎UnoCSS'
     }]
 }])
 
@@ -128,58 +403,63 @@ const onLookPanel = (item) => {
 .box {
   width: 1080px;
   min-height: 80vh;
-  padding: 20px 40px;
+  padding: 40px 80px;
   margin: 0 auto;
-  border-radius: 8px;
+  border-radius: 0;
   display: flex;
   align-content: flex-start;
   flex-wrap: wrap;
   margin-bottom: 20px;
-  background-color: $--color-box;
+  background: url(@/assets/images/paper.png);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
 }
-
 .item-box{
-  width: 120px;
+  width: 140px;
+  margin: 12px 15px;
 }
 .item {
-  display: inline-block;
-  margin-bottom: 12px;
-  font-size: 18px;
-  color: #333333;
-  font-family: inherit;
-  font-weight: 400;
-  cursor: pointer;
-  position: relative;
+  margin: 0;
+  width: fit-content;
+  height: auto;
+  background: transparent;
+  padding: 0;
   border: none;
-  background: none;
-  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-  transition-duration: 400ms;
-  transition-property: color;
 }
-
-.item:focus,
-.item:hover {
-  color: #1e80ff;
+.item {
+  --border-right: 6px;
+  --text-stroke-color: rgba(255,255,255,0.6);
+  --animation-color: #1e80ff;
+  --fs-size: 14px;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: black;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+  cursor: pointer;
+  white-space: nowrap;
 }
-
-.item:focus:after,
-.item:hover:after {
-  width: 100%;
-  left: 0%;
-}
-.item:after {
-  content: "";
-  pointer-events: none;
-  bottom: -2px;
-  left: 50%;
+/* this is the text, when you hover on item */
+.hover-text {
   position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
   width: 0%;
-  height: 2px;
-  background-color: #1e80ff;
-  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-  transition-duration: 400ms;
-  transition-property: width, left;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
 }
+/* hover */
+.item:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
+}
+
 
 
 .popup{
@@ -193,10 +473,11 @@ const onLookPanel = (item) => {
   padding: 12px 28px;
   min-height: 250px;
   border-radius: 8px;
-  background-color: rgba(106, 123, 252, 0.13);
+  background-color: rgba(106, 123, 252, .96);
   border: 2px solid rgb(125, 140, 255);
   animation: popup .4s ease-out  forwards;
   transform-origin: center center;
+  color: #fff;
   h3{
     text-align: center;
     margin-bottom: 8px;
@@ -212,6 +493,7 @@ const onLookPanel = (item) => {
     display: block;
     font-size: 15px;
     margin: 6px 0;
+    color: #fff;
     &:hover{
       text-decoration: underline;
     }

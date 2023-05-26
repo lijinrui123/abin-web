@@ -8,7 +8,11 @@
     <router-link class="navigation-link" to="links">友链</router-link>
   </header>
   <main class="content">
-    <router-view />
+    <router-view v-slot="{ Component, route }">
+      <keep-alive>
+        <component :is="Component" :key="route.name" />
+      </keep-alive>
+    </router-view>
   </main>
 
   <footer>
@@ -24,7 +28,7 @@
 </script>
 
 <style scoped lang="scss">
-.header{
+.header {
   position: fixed;
   left: 0;
   top: 0;
@@ -33,9 +37,10 @@
   height: $--header-height;
   padding: 0 $--padding-side;
   justify-content: center;
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,.05);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .05);
   background-color: $--color-header;
-  .navigation-link{
+
+  .navigation-link {
     position: relative;
     display: flex;
     padding: 12px 18px;
@@ -46,10 +51,12 @@
     color: #546681;
     font-size: 16px;
     text-decoration: none;
-    &:hover{
+
+    &:hover {
       color: #333333;
     }
-    &:hover::before{
+
+    &:hover::before {
       content: "";
       position: absolute;
       top: auto;
@@ -61,13 +68,14 @@
       width: calc(100% - 2rem);
     }
   }
-  .router-link-active{
+
+  .router-link-active {
     color: $--color-menu-active;
     font-weight: bold;
   }
 }
 
-.content{
+.content {
   width: 100%;
   height: fit-content;
   padding-top: calc($--header-height + 20px);
@@ -77,7 +85,7 @@
   background: $--color-body;
 }
 
-footer{
+footer {
   position: relative;
   width: 100%;
   padding: 10px 0;
@@ -85,28 +93,30 @@ footer{
   justify-content: center;
   background: #fff;
   border-top: 1px solid $--color-border;
-  a{
+
+  a {
     line-height: 25px;
     font-size: 14px;
   }
 }
 
 @media (max-width: 480px) {
-  header{
+  header {
     bottom: 0;
     top: unset !important;
-    box-shadow: 0 -1px 2px 0 rgba(0,0,0,.05);
+    box-shadow: 0 -1px 2px 0 rgba(0, 0, 0, .05);
   }
-  .content{
+
+  .content {
     padding-top: 20px;
     padding-bottom: calc($--header-height + 20px);
+
     &::-webkit-scrollbar {
       display: none;
     }
   }
-  footer{
+
+  footer {
     display: none;
   }
-}
-
-</style>
+}</style>

@@ -1,133 +1,208 @@
 <template>
   <div class="box">
-    <a class="game-item" target="_blank" href="https://bruno-simon.com/">
-      <img src="http://www.cxy521.com/static/img/index/relax/simon.png" alt="" class="game-logo">
-      <div class="game-info">
-        <div class="game-title">网页开车</div>
-        <div class="game-desc">控制模拟的遥控车在地图上随意行驶，十分解压</div>
-      </div>
+    <a class="relax-item" target="_blank" href="https://bruno-simon.com/">
+      <fish>
+        <img src="http://www.cxy521.com/static/img/index/relax/simon.png" alt="" class="game-logo">
+        <div class="game-info">
+          <div class="game-title">网页开车</div>
+          <div class="game-desc">控制模拟的遥控车在地图上随意行驶，十分解压</div>
+        </div>
+      </fish>
     </a>
-    <a class="game-item" target="_blank" href="https://fishpi.cn/">
-      <img src="http://www.cxy521.com/static/img/index/relax/mp.png" alt="" class="game-logo">
-      <div class="game-info">
-        <div class="game-title">摸鱼派</div>
-        <div class="game-desc">一个以程序员,设计师和极客为核心的社区</div>
-      </div>
+    <a class="relax-item" target="_blank" href="https://fishpi.cn/">
+      <fish>
+        <img src="http://www.cxy521.com/static/img/index/relax/mp.png" alt="" class="game-logo">
+        <div class="game-info">
+          <div class="game-title">摸鱼派</div>
+          <div class="game-desc">一个以程序员,设计师和极客为核心的社区</div>
+        </div>
+      </fish>
     </a>
-    <a class="game-item" target="_blank" href="https://strobe.cool/">
-      <img src="http://www.cxy521.com/static/img/index/relax/strobe.ico" alt="" class="game-logo">
-      <div class="game-info">
-        <div class="game-title">扭曲世界</div>
-        <div class="game-desc">你周围的世界会改变形状，显得扭曲和变形。</div>
-      </div>
+    <a class="relax-item" target="_blank" href="https://strobe.cool/">
+      <fish>
+        <img src="http://www.cxy521.com/static/img/index/relax/strobe.ico" alt="" class="game-logo">
+        <div class="game-info">
+          <div class="game-title">扭曲世界</div>
+          <div class="game-desc">你周围的世界会改变形状，显得扭曲和变形。</div>
+        </div>
+      </fish>
     </a>
-    <a class="game-item" target="_blank" href="https://adarkroom.doublespeakgames.com/?lang=zh_cn">
-      <img src="http://www.cxy521.com/static/img/index/relax/adr.png" alt="" class="game-logo">
-      <div class="game-info">
-        <div class="game-title">暗室</div>
-        <div class="game-desc">适用于浏览器的极简文字冒险游戏</div>
-      </div>
+    <a class="relax-item" target="_blank" href="https://adarkroom.doublespeakgames.com/?lang=zh_cn">
+      <fish>
+        <img src="http://www.cxy521.com/static/img/index/relax/adr.png" alt="" class="game-logo">
+        <div class="game-info">
+          <div class="game-title">暗室</div>
+          <div class="game-desc">适用于浏览器的极简文字冒险游戏</div>
+        </div>
+      </fish>
     </a>
-    <a class="game-item" target="_blank" href="https://adarkroom.doublespeakgames.com/?lang=zh_cn">
-      <img src="http://www.cxy521.com/static/img/index/relax/fwebhek.ico" alt="" class="game-logo">
-      <div class="game-info">
-        <div class="game-title">神笔马良</div>
-        <div class="game-desc">小人历险记-创作型游戏 </div>
-      </div>
+    <a class="relax-item" target="_blank" href="https://adarkroom.doublespeakgames.com/?lang=zh_cn">
+      <fish>
+        <img src="http://www.cxy521.com/static/img/index/relax/fwebhek.ico" alt="" class="game-logo">
+        <div class="game-info">
+          <div class="game-title">神笔马良</div>
+          <div class="game-desc">小人历险记-创作型游戏 </div>
+        </div>
+      </fish>
     </a>
-    <a class="game-item" target="_blank" href="https://zoom.earth/">
-      <img src="http://www.cxy521.com/static/img/index/relax/earth.ico" alt="" class="game-logo">
-      <div class="game-info">
-        <div class="game-title">地球卫星</div>
-        <div class="game-desc">通过地图来检测区域天气、地形</div>
-      </div>
+    <a class="relax-item" target="_blank" href="https://zoom.earth/">
+      <fish>
+        <img src="http://www.cxy521.com/static/img/index/relax/earth.ico" alt="" class="game-logo">
+        <div class="game-info">
+          <div class="game-title">地球卫星</div>
+          <div class="game-desc">通过地图来检测区域天气、地形</div>
+        </div>
+      </fish>
     </a>
-    <a class="game-item" target="_blank" href="https://bellwoods.xyz/">
-      <img src="http://www.cxy521.com/static/img/index/relax/bellwoods.png" alt="" class="game-logo">
-      <div class="game-info">
-        <div class="game-title">在线放风筝</div>
-        <div class="game-desc">移动鼠标可以让风筝飞翔，伴随着音乐</div>
-      </div>
+    <a class="relax-item" target="_blank" href="https://bellwoods.xyz/">
+      <fish>
+        <img src="http://www.cxy521.com/static/img/index/relax/bellwoods.png" alt="" class="game-logo">
+        <div class="game-info">
+          <div class="game-title">在线放风筝</div>
+          <div class="game-desc">移动鼠标可以让风筝飞翔，伴随着音乐</div>
+        </div>
+      </fish>
     </a>
-    <a class="game-item" target="_blank" href="https://www.autopiano.cn/">
-      <img src="https://www.autopiano.cn/favicon.ico" alt="" class="game-logo">
-      <div class="game-info">
-        <div class="game-title">线上钢琴</div>
-        <div class="game-desc">在网页上谈钢琴，也可以根据曲子演奏</div>
-      </div>
-    </a>
-    <a class="game-item" target="_blank" href="http://www.staggeringbeauty.com/">
-      <img src="http://www.cxy521.com/static/img/index/relax/yaoyao.png" alt="" class="game-logo">
-      <div class="game-info">
-        <div class="game-title">魔性摇摇乐</div>
-        <div class="game-desc">魔性解压网站，急速晃动还会闪亮你的眼</div>
-      </div>
-    </a>
-    <a class="game-item" target="_blank" href="http://www.staggeringbeauty.com/">
-      <img src="https://gate.ofo.moe/social/32x32.png" alt="" class="game-logo">
-      <div class="game-info">
-        <div class="game-title">任意门</div>
-        <div class="game-desc">开启一次未知之旅，这里总有一个属于你的宝站！</div>
-      </div>
-    </a>
-    <a class="game-item" target="_blank" href="https://oreo.ddiu.me/">
-      <img src="https://oreo.ddiu.me/favicon.ico" alt="" class="game-logo">
-      <div class="game-info">
-        <div class="game-title">奥利奥生成器</div>
-        <div class="game-desc">无敌沙雕好玩的奥利奥图片生成器</div>
-      </div>
-    </a>
-  </div>
+    <a class="relax-item" target="_blank" href="https://www.autopiano.cn/">
+      <fish>
+        <img src="https://www.autopiano.cn/favicon.ico" alt="" class="game-logo">
+        <div class="game-info">
+          <div class="game-title">线上钢琴</div>
+          <div class="game-desc">在网页上谈钢琴，也可以根据曲子演奏</div>
+        </div>
+      </fish>
 
-  <div id="jsi-flying-fish-container"></div>
+    </a>
+    <a class="relax-item" target="_blank" href="http://www.staggeringbeauty.com/">
+      <fish>
+        <img src="http://www.cxy521.com/static/img/index/relax/yaoyao.png" alt="" class="game-logo">
+        <div class="game-info">
+          <div class="game-title">魔性摇摇乐</div>
+          <div class="game-desc">魔性解压网站，急速晃动还会闪亮你的眼</div>
+        </div>
+      </fish>
+    </a>
+    <a class="relax-item" target="_blank" href="http://www.staggeringbeauty.com/">
+      <fish>
+        <img src="https://gate.ofo.moe/social/32x32.png" alt="" class="game-logo">
+        <div class="game-info">
+          <div class="game-title">任意门</div>
+          <div class="game-desc">开启一次未知之旅，这里总有一个属于你的宝站！</div>
+        </div>
+      </fish>
+    </a>
+    <a class="relax-item" target="_blank" href="https://oreo.ddiu.me/">
+      <fish>
+        <img src="https://oreo.ddiu.me/favicon.ico" alt="" class="game-logo">
+        <div class="game-info">
+          <div class="game-title">奥利奥生成器</div>
+          <div class="game-desc">无敌沙雕好玩的奥利奥图片生成器</div>
+        </div>
+      </fish>
+    </a>
+
+
+    <!-- 气泡 -->
+    <div class="bubble" v-for="bubble in 18" :key="bubble" :class="`b${bubble}`"></div>
+    <!-- 底部鱼 -->
+    <div id="jsi-flying-fish-container" class="fish-area"></div>
+  </div>
 </template>
 
 
-<script setup>
-import $ from 'jquery'
-import { onMounted } from 'vue';
+<script setup name="Relax">
+import fish from "./components/fish.vue";
+import { nextTick, onMounted, onUnmounted } from 'vue';
 
 onMounted(() => {
-  let script = document.createElement('script');
-  script.type = 'text/javascript';
-  script.src = 'https://web-abin.gitee.io/abin-web/js/fish.js'
-  document.body.appendChild(script);
+  var fishJs = document.getElementById('fish');
+  if (!fishJs) {
+    let script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.id = 'fish'
+    script.src = 'https://web-abin.gitee.io/abin-web/js/fish.js'
+    document.body.appendChild(script);
+  }
 })
-
 
 const isLocal = location.hostname === 'localhost'
 </script>
 
 <style lang="scss" scoped>
-.game-item {
-  width: 224px;
-  height: 95px;
+$--footerHeight: 160px;
+.box {
+  position: relative;
+  width: 100%;
+  padding-bottom: calc($--footerHeight + 20px);
+  overflow-x: hidden;
+  // background: lightblue;
+  background: linear-gradient(#29B6F6, #0D47A1, #1A237E);
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@keyframes shake {
+  10%,90% {
+    transform: translate3d(2px,0,0) scale(.95);
+  }
+  20%,80% {
+    transform: translate3d(3px,0,0) scale(.95);
+  }
+  30%,70% {
+    transform: translate3d(-5px,0,0) scale(.95);
+  }
+  40%,60% {
+    transform: translate3d(5px,0,0) scale(.95);
+  }
+  50% {
+    transform: translate3d(-5px,0,0) scale(.95);
+  }
+}
+.relax-item {
+  position: relative;
+  z-index: 1;
+  width: 200px;
+  height: 110px;
   padding: 10px;
-  margin: 12px 0 0 12px;
-  border: 1px solid #e4ecf3;
-  box-shadow: 1px 2px 3px #f2f6f8;
+  margin: 12px 50px 0 12px;
   border-radius: 6px;
-  background: #fff;
-  overflow: hidden;
   transition: all .3s;
   display: flex;
   align-items: center;
-  cursor: pointer;
-  &:hover{
-    background: #f2f8fd;
+  cursor: -webkit-grab;
+
+  &:hover {
+    transform: scale(.95);
+    animation: shake .6s linear infinite;
+    &:before{
+      content: '啊啊啊，放开我～';
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      z-index: 3;
+      color: #333;
+      padding: 8px 12px;
+      background: #fff;
+      border-radius: 4px;
+    }
   }
 
   .game-logo {
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
     border-radius: 50%;
     object-fit: cover;
     overflow: hidden;
     margin-right: 10px;
+    border: 2px solid #2a1f17;
   }
 
   .game-info {
     flex: 1;
+    padding-right: 10px;
 
     .game-title {
       font-size: 14px;
@@ -151,4 +226,105 @@ const isLocal = location.hostname === 'localhost'
       margin-top: 5px;
     }
   }
-}</style>
+}
+
+.fish-area {
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  z-index: 2;
+  width: 100%;
+  height: $--footerHeight;
+  overflow: hidden;
+  padding: 0;
+}
+
+.bubble {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  background-color: #4DD0E1;
+  height: 20px;
+  width: 20px;
+  min-width: 10px;
+  min-height: 10px;
+  border-radius: 50%;
+  box-shadow: inset -2px -3px #00BCD4, 1px 3px rgba(0, 0, 0, .1);
+  opacity: 0;
+  pointer-events: none;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-color: transparent;
+    width: 10px;
+    height: 10px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    border-top: solid 3px transparent;
+    border-right: solid 3px transparent;
+    border-bottom: solid 3px transparent;
+    transform: rotate(45deg);
+    opacity: .6;
+    top: 2px;
+    left: 2px;
+  }
+}
+
+@for $i from 1 through 18 {
+  .b#{$i} {
+    $--radius: random(20)+10+px;
+    width: $--radius;
+    height: $--radius;
+    left: (random(1600)) + px;
+    bottom: (random(100)) + px;
+    animation: bubble- + (random(3)) 9.5s infinite linear;
+    animation-delay: random(9) + s;
+  }
+}
+
+@keyframes bubble-1 {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  70% {
+    transform: translateY(-100vh) translateX(300px);
+  }
+
+  100% {
+    transform: translateY(-100vh) translateX(30px);
+  }
+}
+
+@keyframes bubble-2 {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  70% {
+    transform: translateY(-100vh) translateX(150px);
+  }
+
+  100% {
+    transform: translateY(-100vh) translateX(-100px);
+  }
+}
+
+@keyframes bubble-3 {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  70% {
+    transform: translateY(-100vh) translateX(-280px);
+  }
+
+  100% {
+    transform: translateY(-100vh) translateX(100px);
+  }
+}
+</style>
