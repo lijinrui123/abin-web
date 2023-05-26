@@ -2,7 +2,7 @@
   <div class="box">
     <a class="relax-item" target="_blank" href="https://bruno-simon.com/">
       <fish>
-        <img src="@/assets/icons/icon3.png" alt="" class="game-logo">
+        <img src="@/assets/icons/icon3.png" alt="" class="fish-eye">
         <div class="game-info">
           <div class="game-title">网页开车</div>
           <div class="game-desc">控制模拟的遥控车在地图上随意行驶，十分解压</div>
@@ -11,7 +11,7 @@
     </a>
     <a class="relax-item" target="_blank" href="https://fishpi.cn/">
       <fish>
-        <img src="@/assets/icons/icon4.png" alt="" class="game-logo">
+        <img src="@/assets/icons/icon4.png" alt="" class="fish-eye">
         <div class="game-info">
           <div class="game-title">摸鱼派</div>
           <div class="game-desc">一个以程序员,设计师和极客为核心的社区</div>
@@ -20,7 +20,7 @@
     </a>
     <a class="relax-item" target="_blank" href="https://strobe.cool/">
       <fish>
-        <img src="@/assets/icons/icon5.png" alt="" class="game-logo">
+        <img src="@/assets/icons/icon5.png" alt="" class="fish-eye">
         <div class="game-info">
           <div class="game-title">扭曲世界</div>
           <div class="game-desc">你周围的世界会改变形状，显得扭曲和变形。</div>
@@ -29,7 +29,7 @@
     </a>
     <a class="relax-item" target="_blank" href="https://adarkroom.doublespeakgames.com/?lang=zh_cn">
       <fish>
-        <img src="@/assets/icons/icon6.png" alt="" class="game-logo">
+        <img src="@/assets/icons/icon6.png" alt="" class="fish-eye">
         <div class="game-info">
           <div class="game-title">暗室</div>
           <div class="game-desc">适用于浏览器的极简文字冒险游戏</div>
@@ -38,7 +38,7 @@
     </a>
     <a class="relax-item" target="_blank" href="https://adarkroom.doublespeakgames.com/?lang=zh_cn">
       <fish>
-        <img src="@/assets/icons/icon7.png" alt="" class="game-logo">
+        <img src="@/assets/icons/icon7.png" alt="" class="fish-eye">
         <div class="game-info">
           <div class="game-title">神笔马良</div>
           <div class="game-desc">小人历险记-创作型游戏 </div>
@@ -47,7 +47,7 @@
     </a>
     <a class="relax-item" target="_blank" href="https://zoom.earth/">
       <fish>
-        <img src="@/assets/icons/icon8.png" alt="" class="game-logo">
+        <img src="@/assets/icons/icon8.png" alt="" class="fish-eye">
         <div class="game-info">
           <div class="game-title">地球卫星</div>
           <div class="game-desc">通过地图来检测区域天气、地形</div>
@@ -56,7 +56,7 @@
     </a>
     <a class="relax-item" target="_blank" href="https://bellwoods.xyz/">
       <fish>
-        <img src="@/assets/icons/icon9.png" alt="" class="game-logo">
+        <img src="@/assets/icons/icon9.png" alt="" class="fish-eye">
         <div class="game-info">
           <div class="game-title">在线放风筝</div>
           <div class="game-desc">移动鼠标可以让风筝飞翔，伴随着音乐</div>
@@ -65,7 +65,7 @@
     </a>
     <a class="relax-item" target="_blank" href="https://www.autopiano.cn/">
       <fish>
-        <img src="https://www.autopiano.cn/favicon.ico" alt="" class="game-logo">
+        <img src="https://www.autopiano.cn/favicon.ico" alt="" class="fish-eye">
         <div class="game-info">
           <div class="game-title">线上钢琴</div>
           <div class="game-desc">在网页上谈钢琴，也可以根据曲子演奏</div>
@@ -75,7 +75,7 @@
     </a>
     <a class="relax-item" target="_blank" href="http://www.staggeringbeauty.com/">
       <fish>
-        <img src="@/assets/icons/icon10.png" alt="" class="game-logo">
+        <img src="@/assets/icons/icon10.png" alt="" class="fish-eye">
         <div class="game-info">
           <div class="game-title">魔性摇摇乐</div>
           <div class="game-desc">魔性解压网站，急速晃动还会闪亮你的眼</div>
@@ -84,7 +84,7 @@
     </a>
     <a class="relax-item" target="_blank" href="http://www.staggeringbeauty.com/">
       <fish>
-        <img src="https://gate.ofo.moe/social/32x32.png" alt="" class="game-logo">
+        <img src="https://gate.ofo.moe/social/32x32.png" alt="" class="fish-eye">
         <div class="game-info">
           <div class="game-title">任意门</div>
           <div class="game-desc">开启一次未知之旅，这里总有一个属于你的宝站！</div>
@@ -93,7 +93,7 @@
     </a>
     <a class="relax-item" target="_blank" href="https://oreo.ddiu.me/">
       <fish>
-        <img src="https://oreo.ddiu.me/favicon.ico" alt="" class="game-logo">
+        <img src="https://oreo.ddiu.me/favicon.ico" alt="" class="fish-eye">
         <div class="game-info">
           <div class="game-title">奥利奥生成器</div>
           <div class="game-desc">无敌沙雕好玩的奥利奥图片生成器</div>
@@ -103,7 +103,7 @@
 
 
     <!-- 气泡 -->
-    <div class="bubble" v-for="bubble in 18" :key="bubble" :class="`b${bubble}`"></div>
+    <div class="bubble" v-for="bubble in 30" :key="bubble" :class="`b${bubble}`"></div>
     <!-- 底部鱼 -->
     <div id="jsi-flying-fish-container" class="fish-area"></div>
   </div>
@@ -133,8 +133,8 @@ $--footerHeight: 160px;
 .box {
   position: relative;
   width: 100%;
+  height: fit-content;
   padding-bottom: calc($--footerHeight + 20px);
-  overflow-x: hidden;
   // background: lightblue;
   background: linear-gradient(#29B6F6, #0D47A1, #1A237E);
 
@@ -160,6 +160,11 @@ $--footerHeight: 160px;
     transform: translate3d(-5px,0,0) scale(.95);
   }
 }
+@keyframes fish{
+  100%{
+    transform: scaleY(.94);
+  }
+}
 .relax-item {
   position: relative;
   z-index: 1;
@@ -172,6 +177,7 @@ $--footerHeight: 160px;
   display: flex;
   align-items: center;
   cursor: -webkit-grab;
+  animation: fish 1s linear infinite alternate;
 
   &:hover {
     transform: scale(.95);
@@ -187,9 +193,13 @@ $--footerHeight: 160px;
       background: #fff;
       border-radius: 4px;
     }
+    .fish-eye{
+      border-width: 5px;
+    }
   }
 
-  .game-logo {
+  .fish-eye {
+    position: relative;
     width: 25px;
     height: 25px;
     margin-left: 10px;
@@ -229,14 +239,17 @@ $--footerHeight: 160px;
 }
 
 .fish-area {
+  display: inline-block;
   position: absolute;
   left: 0;
-  bottom: -10px;
+  bottom: -20px;
   z-index: 2;
   width: 100%;
   height: $--footerHeight;
-  overflow: hidden;
   padding: 0;
+  canvas{
+    display: inline-block;
+  }
 }
 
 .bubble {
@@ -271,15 +284,15 @@ $--footerHeight: 160px;
   }
 }
 
-@for $i from 1 through 18 {
+@for $i from 1 through 30 {
   .b#{$i} {
     $--radius: random(20)+10+px;
     width: $--radius;
     height: $--radius;
     left: (random(1600)) + px;
     bottom: (random(100)) + px;
-    animation: bubble- + (random(3)) 9.5s infinite linear;
-    animation-delay: random(9) + s;
+    animation: bubble- + (random(3)) 10s infinite linear;
+    animation-delay: random(10) + s;
   }
 }
 

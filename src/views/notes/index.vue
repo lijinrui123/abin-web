@@ -244,7 +244,7 @@ const list = ref([
 },
 {
     id: 'Tailwind',
-    name: '腾讯云trtc',
+    name: 'Tailwind',
     official: [{
       link: 'https://www.tailwindcss.cn/',
       name: 'tailwindcss官网'

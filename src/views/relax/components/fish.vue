@@ -39,15 +39,16 @@
   border-radius: 80% 20% 20% 80% / 50%;
   border: 3px solid #2a1f17;
   transform-origin: center left;
+  animation: tailSlow 1.2s ease-in-out infinite alternate;
 }
 
 @keyframes tailSlow {
   0% {
-    transform: rotateY(25deg) skewX(7deg);
+    transform: rotateY(25deg) translate(-10%,-50%);
   }
 
   100% {
-    transform: rotateY(-25deg) skewX(7deg);
+    transform: rotateY(-25deg) translate(-10%,-50%);
   }
 }
 
@@ -69,6 +70,7 @@
   background: orange;
   border: 2px solid #2a1f17;
   transform: translate(-40%, -20%) skew(-10deg) rotate(-2deg);
+  animation: finTop 1.2s linear infinite alternate;
 }
 
 .fish-fins-bot {
@@ -81,5 +83,24 @@
   background: orange;
   border: 2px solid #2a1f17;
   transform: translate(-90%, 0%) skew(10deg) rotate(-16deg);
+  animation: finBot 1.2s linear infinite alternate;
+}
+@keyframes finTop {
+  0% {
+      transform: translate(-40%, -20%) skew(-10deg) rotate(-2deg);
+  }
+
+  100% {
+      transform: translate(-40%, -20%) skew(-10deg) rotate(-14deg);
+  }
+}
+@keyframes finBot {
+  0% {
+      transform: translate(-90%, 0%) skew(10deg) rotate(-20deg);
+  }
+
+  100% {
+      transform: translate(-90%, 0%) skew(10deg) rotate(-16deg)
+  }
 }
 </style>

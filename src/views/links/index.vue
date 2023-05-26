@@ -10,7 +10,7 @@
 img{
   display: block;
   width: auto;
-  height: 60vh;
+  height: 70vh;
   object-fit: cover;
   margin: 0 auto;
 }
