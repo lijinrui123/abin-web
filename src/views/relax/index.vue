@@ -318,7 +318,7 @@ $--footerHeight: 160px;
   }
 
   70% {
-    transform: translateY(-100vh) translateX(150px);
+    transform: translateY(-70vh) translateX(150px);
   }
 
   100% {
@@ -333,7 +333,7 @@ $--footerHeight: 160px;
   }
 
   70% {
-    transform: translateY(-100vh) translateX(-280px);
+    transform: translateY(-70vh) translateX(-280px);
   }
 
   100% {

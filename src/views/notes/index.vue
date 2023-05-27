@@ -18,7 +18,7 @@
     <div class="popup" v-if="showPanel" @click.stop>
       <h3>【 {{  activeDocs.name }} 】</h3>
       <p>官方文档</p>
-      <a :href="link1.link" target="_blank" v-for="(link1,link1Index) in activeDocs.official" :key="link1.link">{{  link1.name?link1.name:`${activeDocs.name} 官方文档${link1Index + 1}` }}</a>
+      <a :href="link1.link" target="_blank" v-for="(link1,link1Index) in activeDocs.official" :key="link1.link">{{  link1.name?link1.name:`${activeDocs.name} 官方文档${ activeDocs.official.length > 1?link1Index + 1:'' }` }}</a>
       <p v-if="activeDocs.others && activeDocs.others.length">相关文档</p>
       <a :href="link2.link" target="_blank" v-for="link2 in activeDocs.others" :key="link2.link">{{  link2.name }}</a>
     </div>
@@ -91,6 +91,14 @@ const list = ref([
     },{
       link: 'https://blog.csdn.net/sipallan/article/details/51049925',
       name: 'html <a>标签属性总结'
+    }]
+},
+{
+  id: 'Babylon.js',
+  name: 'Babylon.js',
+  official: [{
+      link: 'https://www.babylonjs.com/',
+      name: 'Babylon中文官网'
     }]
 },
 {
@@ -167,6 +175,39 @@ const list = ref([
     }]
 },
 {
+    id: 'Express',
+    name: 'Express',
+    official: [{
+      link: 'https://www.expressjs.com.cn/',
+      name: 'Express中文官网'
+    }],
+    others: [{
+      link: 'https://www.runoob.com/nodejs/nodejs-express-framework.html?_t_t_t=0.6210600977753176',
+      name: 'Express框架 菜鸟教程'
+    },{
+      link: 'https://www.runoob.com/w3cnote/express-4-x-api.html',
+      name: 'Express 4.x API 中文文档'
+    }]
+},
+{
+    id: 'Flutter',
+    name: 'Flutter',
+    official: [{
+      link: 'https://flutter.dev/',
+      name: 'Flutter英文官网'
+    },{
+      link: 'https://flutter.cn/',
+      name: 'Flutter中文官网'
+    }],
+    others: [{
+      link: 'https://codelabs.flutter-io.cn/',
+      name: 'Flutter Codelabs'
+    },{
+      link: 'https://flutter.cn/docs/cookbook',
+      name: 'Flutter教程文档'
+    }]
+},
+{
     id: 'iScroll',
     name: 'iScroll',
     icon: 'https://iscrolljs.com/wp-content/uploads/2021/04/fav_iscrolljs_iGq_icon.ico',
@@ -191,6 +232,22 @@ const list = ref([
     }]
 },
 {
+    id: 'Micro-app',
+    name: 'Micro-app',
+    official: [{
+      link: 'http://cangdu.org/micro-app/docs.html#/',
+      name: 'Micro-app教程'
+    }]
+},
+{
+    id: 'Material-UI',
+    name: 'Material-UI',
+    official: [{
+      link: 'https://mui.com/',
+      name: 'Material-UI官网'
+    }]
+},
+{
     id: 'MUI',
     name: 'MUI',
     icon: 'https://dev.dcloud.net.cn/mui/favicon.ico',
@@ -208,12 +265,111 @@ const list = ref([
     }]
 },
 {
+    id: 'Node.js',
+    name: 'Node.js',
+    official: [{
+      link: 'https://nodejs.p2hp.com/',
+      name: 'Node.js中文网'
+    },{
+      link: 'https://nodejs.org/zh-cn',
+      name: 'Node.js官网'
+    }],
+    others: [{
+      link: 'https://www.w3cschool.cn/nodejs/',
+      name: 'Node.js教程 w3cSchool'
+    },{
+      link: 'https://www.runoob.com/nodejs/nodejs-tutorial.html',
+      name: 'Node.js教程 菜鸟教程'
+    }]
+},
+{
+    id: 'Pinia',
+    name: 'Pinia',
+    official: [{
+      link: 'https://pinia.web3doc.top/',
+      name: 'Pinia中文文档'
+    }]
+},
+{
     id: 'Pixi.js',
     name: 'Pixi.js',
     official: [{
       link: 'http://pixijs.huashengweilai.com/guide/start/1.introduction.html',
       name: 'PixiJS中文网'
     }]
+},
+{
+    id: 'qiankun',
+    name: 'qiankun',
+    official: [{
+      link: 'https://qiankun.umijs.org/zh/',
+      name: 'qiankun官网'
+    }]
+},
+{
+    id: 'React',
+    name: 'React',
+    official: [{
+      link: 'https://react.docschina.org/',
+      name: 'React官网'
+    }],
+    others: [{
+      link: 'https://reactjs.bootcss.com/',
+      name: 'React 中文文档'
+    }]
+},
+{
+    id: 'Svelte.js',
+    name: 'Svelte.js',
+    official: [{
+      link: 'https://www.svelte.cn/',
+      name: 'Svelte.js官网'
+    }]
+},
+{
+    id: 'solid.js',
+    name: 'solid.js',
+    official: [{
+      link: 'https://www.solidjs.com/',
+      name: 'solid.js官网'
+    }]
+},
+{
+    id: 'Single-spa',
+    name: 'Single-spa',
+    official: [{
+      link: 'https://zh-hans.single-spa.js.org/docs/getting-started-overview/',
+      name: 'Single spa中文官网'
+    },
+      {
+      link: 'https://single-spa.js.org/',
+      name: 'Single spa英文官网'
+    },{
+      link: 'https://github.com/single-spa/single-spa',
+      name: 'github仓库地址'
+    }],
+    others: [{
+      link: 'https://wener.me/notes/web/framework/single-spa',
+      name: 'single spa教程'
+    }]
+},
+{
+    id: 'Taro',
+    name: 'Taro',
+    official: [{
+      link: 'https://taro.jd.com/',
+      name: 'Taro官网'
+    }],
+    others: []
+},
+{
+    id: 'TaroUI',
+    name: 'TaroUI',
+    official: [{
+      link: 'https://taro-ui.jd.com/#/',
+      name: 'Taro-UI官网'
+    }],
+    others: []
 },
 {
     id: 'three.js',
@@ -352,11 +508,39 @@ const list = ref([
     }]
 },
 {
+    id: 'wujie',
+    name: 'wujie',
+    official: [{
+      link: 'https://gitcode.net/mirrors/Tencent/wujie?utm_source=csdn_github_accelerator',
+      name: 'gitcode仓库地址'
+    }]
+},
+{
+    id: 'web3.js',
+    name: 'web3.js',
+    official: [{
+      link: 'https://learnblockchain.cn/docs/web3js-0.2x/#',
+      name: 'web3.js中文文档'
+    }]
+},
+{
     id: '微信开发文档',
     name: '微信开发文档',
     official: [{
       link: 'https://developers.weixin.qq.com/miniprogram/dev/framework/',
       name: '微信小程序开发文档'
+    }]
+},
+{
+    id: 'uniapp',
+    name: 'uniapp',
+    official: [{
+      link: 'https://uniapp.dcloud.net.cn/uniCloud/unipay.html#',
+      name: 'uniapp官网'
+    }],
+    others: [{
+      link: 'https://www.w3cschool.cn/uni_app/',
+      name: 'uniapp中文文档 w3cSchool'
     }]
 },
 {
@@ -435,7 +619,7 @@ const onLookPanel = (item) => {
   font-size: var(--fs-size);
   font-family: "Arial";
   position: relative;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   color: black;
   -webkit-text-stroke: 1px var(--text-stroke-color);
   cursor: pointer;
