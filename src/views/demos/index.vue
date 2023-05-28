@@ -1,5 +1,5 @@
 <template>
-  <img src="@/assets/images/bg3.png" alt="">
+  <img src="@/assets/images/bg2.jpeg" alt="">
 </template>
 
 <script setup>
