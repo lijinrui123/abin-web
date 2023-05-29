@@ -4,6 +4,7 @@
       <dl>
         <dd
           v-for="(nav, navindex) in list"
+          :key="navindex"
           :id="navindex"
           :class="{ nav_active: navindex == curIndex }"
         >
@@ -12,7 +13,7 @@
       </dl>
     </div>
     <div class="tools-box">
-      <section v-for="(tool, index) in list">
+      <section v-for="(tool, index) in list" :key="index">
         <header :id="tool.id">{{ tool.name }}</header>
         <a target="_blank" class="tool-item" v-for="link in tool.collection" :key="link.link" :href="link.link"
           ><img :data-src="link.icon" alt="" :src="link.icon" />
