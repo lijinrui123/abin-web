@@ -16,16 +16,33 @@
   </main>
 
   <footer>
-    <a href="https://gitee.com/web-abin/abin-web" target="_blank">源码链接</a>、
-    <a href="https://github.com/web-abin" target="_blank">GitHub主页</a>、
-    <a href="https://juejin.cn/user/994399097982728" target="_blank">掘金主页</a>、
-    <a href="https://blog.csdn.net/qq_38974163?type=blog" target="_blank">CSDN主页</a>、
-    <a href="http://web-abin.gitee.io/blog" target="_blank">个人博客</a>
+    <div class="site-links">
+      <a href="https://gitee.com/web-abin/abin-web" target="_blank">源码链接</a>、
+      <a href="https://github.com/web-abin" target="_blank">GitHub主页</a>、
+      <a href="https://juejin.cn/user/994399097982728" target="_blank">掘金主页</a>、
+      <a href="https://blog.csdn.net/qq_38974163?type=blog" target="_blank">CSDN主页</a>、
+      <a href="http://web-abin.gitee.io/blog" target="_blank">个人博客</a>
+    </div>
+    
+    <div class="site-data">
+      <span>建站第<span style="color: #1e80ff">{{ siteCreateDays }}</span>天</span>&nbsp;|&nbsp;
+      <span id="busuanzi_container_site_pv">浏览量<span id="busuanzi_value_site_pv" style="color: #1e80ff">{{ siteData.site_pv }}</span></span>
+    </div>
   </footer>
 </template>
 
 <script setup>
+import { reactive,ref } from "vue"
 
+let siteData = reactive({
+  site_pv: 0
+})
+if (localStorage.getItem('ABIN_SITE_DATA')){
+  siteData = localStorage.getItem('ABIN_SITE_DATA')
+}
+const siteCreateDays = function () {
+  return Math.floor( (Date.now() - new Date('2023-05-28').getTime())/(1000*60*60*24))
+}()
 </script>
 
 <style scoped lang="scss">
@@ -90,13 +107,20 @@ footer {
   position: relative;
   width: 100%;
   padding: 10px 0;
-  display: flex;
-  justify-content: center;
   background: #fff;
   border-top: 1px solid $--color-border;
-
-  a {
-    line-height: 25px;
+  .site-links{
+    display: flex;
+    justify-content: center;
+    a {
+      line-height: 25px;
+      font-size: 14px;
+    }
+  }
+  .site-data{
+    width: 100%;
+    display: flex;
+    justify-content: center;
     font-size: 14px;
   }
 }
