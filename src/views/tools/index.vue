@@ -14,7 +14,8 @@
     </div>
     <div class="tools-box">
       <section v-for="(tool, index) in list" :key="index">
-        <header :id="tool.id">{{ tool.name }}</header>
+        <span :id="tool.id" class="point"></span>
+        <header>{{ tool.name }}</header>
         <a target="_blank" class="tool-item" v-for="link in tool.collection" :key="link.link" :href="link.link"
           ><img :data-src="link.icon" alt="" :src="link.icon" />
           <span class="tool-name">{{ link.name }}</span></a
@@ -274,6 +275,11 @@ const list = ref([
         link: 'https://cssgradient.io/'
       },
       {
+        icon: 'https://static.mybrandnewlogo.com/images/favicon.ico',
+        name: '色彩搭配',
+        link: 'https://mybrandnewlogo.com/color-palette-generator'
+      },
+      {
         icon: 'https://s.techbrood.com/themes/techbrood/image/favicon.ico',
         name: 'border-radius',
         link: 'https://wow.techbrood.com/fiddle/40829'
@@ -299,20 +305,35 @@ const list = ref([
         link: 'https://cssgrid-generator.netlify.app/'
       },
       {
+        icon: 'https://layout.bradwoods.io/favicon.ico',
+        name: '布局生成器',
+        link: 'https://layout.bradwoods.io/'
+      },
+      {
         icon: '	https://animxyz.com/assets/static/animxyz-logo.ce0531f.39f3bde368e480505b70778acaa2ac74.png',
         name: 'animxyz',
         link: 'https://animxyz.com/'
+      },
+      {
+        icon: 'https://www.transition.style/favicon.png',
+        name: '过渡动画',
+        link: 'https://www.transition.style/'
       },
       {
         icon: 'https://getwaves.io/favicon-32x32.png',
         name: 'svg波浪生成器',
         link: 'https://getwaves.io/'
       },
+      {
+        icon: 'https://img2.baidu.com/it/u=3541918504,2197745291&fm=253&fmt=auto&app=138&f=JPEG?w=640&h=287',
+        name: 'svg生成器',
+        link: 'https://app.haikei.app/'
+      }
     ]
   },
   {
     id: 'cool',
-    name: '炫酷动效',
+    name: 'UI灵感',
     collection: [
       {
         icon: '	https://whirl.netlify.app/favicon.ico',
@@ -339,8 +360,26 @@ const list = ref([
         name: 'CSS Tricks',
         link: 'https://qishaoxuan.github.io/css_tricks/'
       },
-
-      
+      {
+        icon: 'https://csscoco.com/inspiration/logo2.png',
+        name: 'CSS Inspiration',
+        link: 'https://csscoco.com/inspiration/#/'
+      },
+      {
+        icon: 'https://shiroi.netlify.app/favicon.ico',
+        name: 'Shiro',
+        link: 'https://shiroi.netlify.app/'
+      },
+      {
+        icon: 'https://cssdesignawards.com/images/favicons/favicon.ico',
+        name: 'CssDesignAwards',
+        link: 'https://cssdesignawards.com/'
+      },
+      {
+        icon: 'https://webdesignclip.com/favicon.ico',
+        name: 'WebDesignClip',
+        link: 'https://webdesignclip.com/'
+      },
     ]
   },
   {
@@ -590,6 +629,12 @@ const toNav = (index) => {
     flex-wrap: wrap;
     margin-bottom: 20px;
     background-color: $--color-box;
+    .point{
+      position: absolute;
+      left: 0;
+      top: -60px;
+      opacity: 0;
+    }
     header {
       position: absolute;
       left: 0;
