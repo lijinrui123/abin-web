@@ -26,7 +26,8 @@
     
     <div class="site-data">
       <span>建站第<span style="color: #1e80ff">{{ siteCreateDays }}</span>天</span>&nbsp;|&nbsp;
-      <span id="busuanzi_container_site_pv">浏览量<span id="busuanzi_value_site_pv" style="color: #1e80ff">{{ siteData.site_pv }}</span></span>
+      <span id="busuanzi_container_site_pv">浏览量<span id="busuanzi_value_site_pv" style="color: #1e80ff">{{ siteData.site_pv }}</span></span>&nbsp;|&nbsp;
+      <span id="busuanzi_container_site_pv">访客数<span id="busuanzi_value_site_uv" style="color: #1e80ff">{{ siteData.site_uv }}</span></span>
     </div>
   </footer>
 </template>
@@ -35,7 +36,8 @@
 import { reactive,ref } from "vue"
 
 let siteData = reactive({
-  site_pv: 0
+  site_pv: 0,
+  site_uv: 0,
 })
 if (localStorage.getItem('ABIN_SITE_DATA')){
   siteData = localStorage.getItem('ABIN_SITE_DATA')
