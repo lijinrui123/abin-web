@@ -112,7 +112,7 @@
 
 <script setup name="Relax">
 import fish from "./components/fish.vue";
-import { nextTick, onMounted, onUnmounted } from 'vue';
+import { onMounted } from 'vue';
 
 onMounted(() => {
   var fishJs = document.getElementById('fish');
@@ -270,8 +270,8 @@ $--footerHeight: 160px;
     content: '';
     position: absolute;
     background-color: transparent;
-    width: 10px;
-    height: 10px;
+    width: 50%;
+    height: 50%;
     border: 3px solid #fff;
     border-radius: 50%;
     border-top: solid 3px transparent;
