@@ -157,6 +157,21 @@ const list = ref([
     others: []
 },
 {
+    id: 'eslint',
+    name: 'eslint',
+    official: [{
+      link: 'https://zh-hans.eslint.org/',
+      name: 'eslint中文文档'
+    }],
+    others: [{
+      link: 'https://www.cnblogs.com/iwillrich/p/16443307.html',
+      name: 'Vue脚手架 eslintrc.js 配置速查'
+    },{
+      link: 'https://www.jianshu.com/p/fe727ad2bbf4',
+      name: 'eslintrc.js配置文件详解'
+    }]
+},
+{
     id: 'Element-Plus',
     name: 'Element-Plus',
     icon: 'https://element-plus.gitee.io/images/element-plus-logo.svg',
@@ -299,6 +314,24 @@ const list = ref([
     }]
 },
 {
+    id: 'prettier',
+    name: 'prettier',
+    official: [{
+      link: 'https://www.prettier.cn/',
+      name: 'Prettier中文网'
+    }],
+    others: [{
+      link: 'https://blog.csdn.net/qq_42611074/article/details/129232744',
+      name: 'prettier所有配置项详细介绍（基于最新版2.8.7）'
+    },{
+      link: 'https://www.freesion.com/article/8482878644/',
+      name: '.PRETTIERRC代码格式化配置介绍'
+    },{
+      link: 'https://blog.csdn.net/weixin_49409651/article/details/118082396',
+      name: 'prettierrc.js 的一些配置项说明'
+    }]
+},
+{
     id: 'qiankun',
     name: 'qiankun',
     official: [{
@@ -396,7 +429,19 @@ const list = ref([
       link: 'http://typescript.p2hp.com/',
       name: 'typescript中文文档'
     }],
-    others: []
+    others: [{
+      link: 'https://zhuanlan.zhihu.com/p/601687200',
+      name: 'tsconfig.json各配置属性详解'
+    },{
+      link: "https://blog.csdn.net/u010100877/article/details/125501185",
+      name: 'tsconfig.json详细配置'
+    },{
+      link: 'https://blog.51cto.com/u_15689678/5396841',
+      name: 'tsconfig.json配置详解 '
+    },{
+      link: 'http://wiki.41bj.com/brochure/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AD%A6%E9%80%8FTypeScript/31-%E9%80%90%E6%9D%A1%E6%9D%A5%E7%9C%8Btsconfig.json%E9%85%8D%E7%BD%AE.html',
+      name: '逐条来看tsconfig.json配置'
+    }]
 },
 {
     id: 'Tailwind',
