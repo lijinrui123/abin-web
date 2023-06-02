@@ -36,7 +36,7 @@
         </div>
       </fish>
     </a>
-    <a class="relax-item" target="_blank" href="https://adarkroom.doublespeakgames.com/?lang=zh_cn">
+    <a class="relax-item" target="_blank" href="https://www.webhek.com/post/draw-a-stickman/">
       <fish>
         <img src="@/assets/icons/icon7.png" alt="" class="fish-eye">
         <div class="game-info">
