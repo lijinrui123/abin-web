@@ -66,6 +66,8 @@ import icon47 from "@/assets/icons/47.png";
 import icon48 from "@/assets/icons/48.png";
 import icon49 from "@/assets/icons/49.png";
 import icon50 from "@/assets/icons/50.png";
+import icon51 from "@/assets/icons/51.png";
+import icon52 from "@/assets/icons/52.png";
 
 const list = ref([
 {
@@ -502,6 +504,16 @@ const list = ref([
         icon: icon43,
         name: 'Vue.js devtools',
         link: 'http://www.itmind.net/6438.html'
+      },
+      {
+        icon: icon51,
+        name: '广告拦截器',
+        link: 'https://extfans.com/productivity/bgnkhhnnamicmpeenaelnjfhikgbkllg/'
+      },
+      {
+        icon: icon52,
+        name: '密码管理',
+        link: 'https://extfans.com/productivity/hdokiejnpimakedhajhdlcegeplioahd/'
       }
     ]
   },
