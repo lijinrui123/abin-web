@@ -429,6 +429,37 @@ const list = ref([
     ]
   },
   {
+    id: 'chatGPT',
+    name: 'chatGPT',
+    collection: [
+      {
+        icon: 'https://cdn.aidutu.cn/res/head/ai.png',
+        name: 'AiDuTu',
+        link: 'https://chat.aidutu.cn/'
+      },
+      {
+        icon: 'https://res.pandateacher.com/WDNS259R1677122357140.png',
+        name: 'AI EDU',
+        link: 'https://ai.aigcfun.com/'
+      },
+      {
+        icon: 'https://www.google-analytics.com/g/collect',
+        name: 'chatbot',
+        link: 'https://chatbot.theb.ai/#/chat'
+      },
+      {
+        icon: 'https://fastgpt.app/favicon-32x32.e3e6336a.png',
+        name: 'fastgpt',
+        link: 'https://fastgpt.app/'
+      },
+      {
+        icon: 'https://chat.xiaozeai.com/favicon.ico',
+        name: 'zecoba',
+        link: 'https://chat.xiaozeai.com/user/login'
+      },
+    ]
+  },
+  {
     id: 'chrome',
     name: 'Chrome插件',
     collection: [
