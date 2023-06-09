@@ -27,9 +27,14 @@
 
 <script setup>
 import { ref } from 'vue'
+//动态加载图片
+const getAssetsFile = (name) => {
+  const url = `../../assets/icons/${name}.png`
+  return new URL(url, import.meta.url).href
+}
 
-import icon1 from "@/assets/icons/icon1.png";
-import icon2 from "@/assets/icons/icon2.png";
+import icon1 from "@/assets/icons/1.png";
+import icon2 from "@/assets/icons/2.png";
 import icon15 from "@/assets/icons/15.png";
 import icon16 from "@/assets/icons/16.png";
 import icon17 from "@/assets/icons/17.png";
@@ -66,8 +71,13 @@ import icon47 from "@/assets/icons/47.png";
 import icon48 from "@/assets/icons/48.png";
 import icon49 from "@/assets/icons/49.png";
 import icon50 from "@/assets/icons/50.png";
+<<<<<<< HEAD
 import icon51 from "@/assets/icons/51.png";
 import icon52 from "@/assets/icons/52.png";
+=======
+import icon53 from "@/assets/icons/53.png";
+import icon54 from "@/assets/icons/54.png";
+>>>>>>> 67cd7aaecb3983467ce0fccae65151db30d1453b
 
 const list = ref([
 {
@@ -440,12 +450,12 @@ const list = ref([
         link: 'https://chat.aidutu.cn/'
       },
       {
-        icon: 'https://res.pandateacher.com/WDNS259R1677122357140.png',
+        icon: icon53,
         name: 'AI EDU',
         link: 'https://ai.aigcfun.com/'
       },
       {
-        icon: 'https://www.google-analytics.com/g/collect',
+        icon: icon54,
         name: 'chatbot',
         link: 'https://chatbot.theb.ai/#/chat'
       },
