@@ -1,1 +1,0 @@
-import{_ as e,c as _,o as s}from"./index-00c3ceeb.js";const t="/abin-web/assets/bg2-ae654a05.jpeg";const c={},n={src:t,alt:""};function o(a,r){return s(),_("img",n)}const f=e(c,[["render",o],["__scopeId","data-v-f6d5678f"]]);export{f as default};
