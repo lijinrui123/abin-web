@@ -71,13 +71,10 @@ import icon47 from "@/assets/icons/47.png";
 import icon48 from "@/assets/icons/48.png";
 import icon49 from "@/assets/icons/49.png";
 import icon50 from "@/assets/icons/50.png";
-<<<<<<< HEAD
 import icon51 from "@/assets/icons/51.png";
 import icon52 from "@/assets/icons/52.png";
-=======
 import icon53 from "@/assets/icons/53.png";
 import icon54 from "@/assets/icons/54.png";
->>>>>>> 67cd7aaecb3983467ce0fccae65151db30d1453b
 
 const list = ref([
 {
