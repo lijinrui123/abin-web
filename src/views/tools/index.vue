@@ -71,8 +71,8 @@ import icon47 from "@/assets/icons/47.png";
 import icon48 from "@/assets/icons/48.png";
 import icon49 from "@/assets/icons/49.png";
 import icon50 from "@/assets/icons/50.png";
-import icon51 from "@/assets/icons/51.png";
-import icon52 from "@/assets/icons/52.png";
+import icon53 from "@/assets/icons/53.png";
+import icon54 from "@/assets/icons/54.png";
 
 const list = ref([
 {
@@ -445,12 +445,12 @@ const list = ref([
         link: 'https://chat.aidutu.cn/'
       },
       {
-        icon: icon51,
+        icon: icon53,
         name: 'AI EDU',
         link: 'https://ai.aigcfun.com/'
       },
       {
-        icon: icon52,
+        icon: icon54,
         name: 'chatbot',
         link: 'https://chatbot.theb.ai/#/chat'
       },
