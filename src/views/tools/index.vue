@@ -29,8 +29,7 @@
 import { ref } from 'vue'
 //动态加载图片
 const getAssetsFile = (name) => {
-  const url = `../../assets/icons/${name}.png`
-  return new URL(url, import.meta.url).href
+  return new URL(`../../assets/icons/${name}.png`, import.meta.url).href
 }
 
 import icon1 from "@/assets/icons/1.png";
@@ -590,7 +589,7 @@ const list = ref([
         link: 'https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks'
       },
       {
-        icon: icon55,
+        icon: getAssetsFile('55'),
         name: 'Markdown预览',
         link: 'https://marketplace.visualstudio.com/items?itemName=mdickin.markdown-shortcuts'
       },
