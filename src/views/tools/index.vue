@@ -75,6 +75,7 @@ import icon51 from "@/assets/icons/51.png";
 import icon52 from "@/assets/icons/52.png";
 import icon53 from "@/assets/icons/53.png";
 import icon54 from "@/assets/icons/54.png";
+import icon55 from "@/assets/icons/55.png";
 
 const list = ref([
 {
@@ -587,6 +588,11 @@ const list = ref([
         icon: icon50,
         name: 'FileSize',
         link: 'https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks'
+      },
+      {
+        icon: icon55,
+        name: 'Markdown预览',
+        link: 'https://marketplace.visualstudio.com/items?itemName=mdickin.markdown-shortcuts'
       },
     ]
   }
