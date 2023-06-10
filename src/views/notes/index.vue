@@ -298,6 +298,21 @@ const list = ref([
     }]
 },
 {
+    id: 'nuxt',
+    name: 'nuxt',
+    official: [{
+      link: 'https://www.nuxtjs.cn/guide/installation',
+      name: 'nuxt2.x 中文文档'
+    },{
+      link: 'https://nuxt.com/docs/getting-started/installation',
+      name: 'nuxt2.x 英文文档'
+    }],
+    others: [{
+      link: 'http://57code.gitee.io/nuxt3-docs-zh/getting-started/installation.html',
+      name: 'nuxt3 中文文档'
+    }]
+},
+{
     id: 'Pinia',
     name: 'Pinia',
     official: [{
