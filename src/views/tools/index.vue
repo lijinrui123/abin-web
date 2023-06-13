@@ -422,6 +422,11 @@ const list = ref([
         name: 'zecoba',
         link: 'https://chat.xiaozeai.com/user/login'
       },
+      {
+        icon: 'https://chat.ktoai.com/favicon.png',
+        name: 'chatgpt对话',
+        link: 'https://chat.ktoai.com/#/'
+      }
     ]
   },
   {

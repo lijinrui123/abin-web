@@ -301,16 +301,27 @@ const list = ref([
     id: 'nuxt',
     name: 'nuxt',
     official: [{
+      link: 'https://v2.nuxt.com/',
+      name: 'nuxt2 官网'
+    },{
       link: 'https://www.nuxtjs.cn/guide/installation',
       name: 'nuxt2.x 中文文档'
     },{
       link: 'https://nuxt.com/docs/getting-started/installation',
-      name: 'nuxt2.x 英文文档'
+      name: 'nuxt3 官网'
     }],
     others: [{
       link: 'http://57code.gitee.io/nuxt3-docs-zh/getting-started/installation.html',
       name: 'nuxt3 中文文档'
     }]
+},
+{
+  id: 'Naive UI',
+  name: 'Naive UI',
+  official: [{
+    link: 'https://www.naiveui.com/zh-CN/os-theme/docs/installation',
+    name: 'Naive UI官方文档'
+  }]
 },
 {
     id: 'Pinia',
