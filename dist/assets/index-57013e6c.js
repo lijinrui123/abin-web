@@ -1,1 +1,0 @@
-import{_ as e,c,o as _}from"./index-a30e1e21.js";const s="/abin-web/assets/qq-code-30f0f86d.jpeg";const t={},o={src:s,alt:""};function n(a,r){return _(),c("img",o)}const i=e(t,[["render",n],["__scopeId","data-v-3c2302c0"]]);export{i as default};

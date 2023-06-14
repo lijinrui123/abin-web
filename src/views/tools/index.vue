@@ -102,6 +102,16 @@ const list = ref([
         name: '站长工具',
         link: 'https://tool.chinaz.com/'
       },
+      {
+        icon: 'https://app.netlify.com/favicon.ico',
+        name: 'netlify网站托管',
+        link: 'https://app.netlify.com/'
+      },
+      {
+        icon: 'https://assets.vercel.com/image/upload/front/favicon/vercel/favicon.ico',
+        name: 'vercel网站托管',
+        link: 'https://vercel.com/dashboard'
+      },
     ]
   },
   {
