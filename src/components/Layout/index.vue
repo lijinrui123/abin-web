@@ -21,7 +21,8 @@
       <a href="https://github.com/web-abin" target="_blank">GitHub主页</a>、
       <a href="https://juejin.cn/user/994399097982728" target="_blank">掘金主页</a>、
       <a href="https://blog.csdn.net/qq_38974163?type=blog" target="_blank">CSDN主页</a>、
-      <a href="http://web-abin.gitee.io/blog" target="_blank">个人博客</a>
+      <a href="http://web-abin.gitee.io/blog" target="_blank">个人博客</a>、
+      <a href="http://web-abin.gitee.io/blog" target="_blank"><router-link to="links">友情链接</router-link></a>
     </div>
     
     <div class="site-data">

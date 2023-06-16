@@ -32,11 +32,12 @@ export const constantRoutes = [
         path: '/abin-web/demos',
         component: () => import('@/views/demos/index.vue')
       },
-      {
-        path: '/abin-web/links',
-        component: () => import('@/views/links/index.vue')
-      },
-    ]
+    ],
+  },
+  {
+    path: '/abin-web/links',
+    name: 'linkes',
+    component: () => import('@/views/links/index.vue')
   },
   {
     path: '/:pathMatch(.*)*',
