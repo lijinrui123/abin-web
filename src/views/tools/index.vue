@@ -22,11 +22,20 @@
         >
       </section>
     </div>
+
+    <Notice>⛅ 本站已使用 nuxt3 重构~<br>
+      💥 即日起，本站将不再更新内容!!!<br>
+      💌 建议改换使用新站哦～见谅～
+      <br><br>
+      🎁 新站地址 ---- <a target="_blank" href="https://web-abin.github.io/abinWeb/" style="color: #3370ff;text-decoration: underline;">https://web-abin.github.io/abinWeb/</a>
+    </Notice>
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
+import Notice from "@/components/Notice/index.vue";
+
 //动态加载图片
 const getAssetsFile = (name) => {
   return new URL(`../../assets/icons/${name}.png`, import.meta.url).href
@@ -311,7 +320,7 @@ const list = ref([
     name: 'UI灵感',
     collection: [
       {
-        icon: '	https://whirl.netlify.app/favicon.ico',
+        icon: 'https://whirl.netlify.app/favicon.ico',
         name: 'whirl加载动效',
         link: 'https://whirl.netlify.app/'
       },
@@ -421,11 +430,6 @@ const list = ref([
         icon: getAssetsFile('54'),
         name: 'chatbot',
         link: 'https://chatbot.theb.ai/#/chat'
-      },
-      {
-        icon: 'https://fastgpt.app/favicon-32x32.e3e6336a.png',
-        name: 'fastgpt',
-        link: 'https://fastgpt.app/'
       },
       {
         icon: 'https://chat.xiaozeai.com/favicon.ico',

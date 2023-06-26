@@ -8,11 +8,6 @@
           <span class="hover-text" aria-hidden="true">&nbsp;&nbsp;{{ item.name }}&nbsp;&nbsp;</span>
       </div>
       </div>
-      
-      
-      <!-- <div class="item-box" v-for="item in list" :key="item.id" @click.stop="onLookPanel(item)">
-        <span class="item">{{ item.name }}</span>
-      </div> -->
     </div>
 
     <div class="popup" v-if="showPanel" @click.stop>
