@@ -82,7 +82,7 @@
         </div>
       </fish>
     </a>
-    <a class="relax-item" target="_blank" href="http://www.staggeringbeauty.com/">
+    <a class="relax-item" target="_blank" href="https://gate.ofo.moe/">
       <fish>
         <img src="https://gate.ofo.moe/social/32x32.png" alt="" class="fish-eye">
         <div class="game-info">
