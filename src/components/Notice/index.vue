@@ -10,7 +10,10 @@
         <slot/>
       </div>
 
-      <div class="card-confirm" @click="onStop">今天不再通知</div>
+      <footer>
+        <div class="card-confirm" @click="onStop">今天不再通知</div>
+        <div class="card-confirm" @click="onStop2">以后不再通知</div>
+      </footer>
     </div>
   </div>
 </template>
@@ -29,6 +32,11 @@ const onClose = () => {
 const onStop = () => {
   //设置24小时的有效期
   window.localStorage.setItem('ABIN_NOT_NOTICE',Date.now())
+  show.value = false
+}
+
+const onStop2 = () => {
+  window.localStorage.setItem('ABIN_NOT_NOTICE',new Date('2100/01/01 00:00:00').getTime())
   show.value = false
 }
 </script>
@@ -70,13 +78,18 @@ const onStop = () => {
       line-height: 1.8;
       color: rgb(51, 54, 57);
     }
-    &-confirm{
+    footer{
       position: absolute;
       bottom: 14px;
       left: 50%;
       transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+    }
+    &-confirm{
       font-size: 13px;
       cursor: pointer;
+      margin: 0 20px;
     }
   }
 }

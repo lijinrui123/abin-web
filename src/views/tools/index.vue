@@ -47,6 +47,16 @@ const list = ref([
     name: '常用工具',
     collection: [
       {
+        "icon": "https://github.githubassets.com/favicons/favicon.svg",
+        "name": "Github Trending",
+        "link": "https://github.com/trending"
+      },
+      {
+        "icon": getAssetsFile('56'),
+        "name": "json在线解析",
+        "link": "https://www.sojson.com/"
+      },
+      {
         icon: 'https://caniuse.com/img/favicon-128.png',
         name: '兼容性查询',
         link: 'https://caniuse.com/'
@@ -120,6 +130,11 @@ const list = ref([
         icon: 'https://assets.vercel.com/image/upload/front/favicon/vercel/favicon.ico',
         name: 'vercel网站托管',
         link: 'https://vercel.com/dashboard'
+      },
+      {
+        "icon": "https://res.wx.qq.com/a/wx_fed/assets/res/NTI4MWU5.ico",
+        "name": "微信公众平台",
+        "link": "https://mp.weixin.qq.com/"
       },
     ]
   },
@@ -231,6 +246,11 @@ const list = ref([
         icon: getAssetsFile('35'),
         name: 'Pxhere图片素材',
         link: 'https://pxhere.com/'
+      },
+      {
+        icon: "https://www.3gbizhi.com/assets/mobile/images/favicon.ico",
+        name: "3G壁纸",
+        link: "https://www.3gbizhi.com/"
       },
       {
         icon: 'https://huatu.98youxi.com/favicon.ico',
@@ -417,29 +437,34 @@ const list = ref([
     name: 'chatGPT',
     collection: [
       {
-        icon: 'https://cdn.aidutu.cn/res/head/ai.png',
-        name: 'AiDuTu',
-        link: 'https://chat.aidutu.cn/'
+        "icon": "https://chat.plexpt.com/favicon.svg",
+        "name": "智能喵",
+        "link": "https://chat.plexpt.com/"
       },
       {
-        icon: getAssetsFile('53'),
-        name: 'AI EDU',
-        link: 'https://ai.aigcfun.com/'
+        "icon": getAssetsFile('57'),
+        "name": "AIer",
+        "link": "https://ai.aging.run/"
       },
       {
-        icon: getAssetsFile('54'),
-        name: 'chatbot',
-        link: 'https://chatbot.theb.ai/#/chat'
+        "icon": "https://chat.ktoai.com/favicon.png",
+        "name": "糖果梦",
+        "link": "https://ai.tgmeng.com/"
       },
       {
-        icon: 'https://chat.xiaozeai.com/favicon.ico',
-        name: 'zecoba',
-        link: 'https://chat.xiaozeai.com/user/login'
+        "icon": "https://cdn.aidutu.cn/res/head/ai.png",
+        "name": "AiDuTu",
+        "link": "https://chat.aidutu.cn/"
       },
       {
-        icon: 'https://chat.ktoai.com/favicon.png',
-        name: 'chatgpt对话',
-        link: 'https://chat.ktoai.com/#/'
+        "icon": getAssetsFile('53'),
+        "name": "AI EDU",
+        "link": "https://ai.aigcfun.com/"
+      },
+      {
+        "icon": getAssetsFile('54'),
+        "name": "chatbot",
+        "link": "https://chatbot.theb.ai/#/chat"
       }
     ]
   },
