@@ -100,6 +100,15 @@
         </div>
       </fish>
     </a>
+    <a class="relax-item" target="_blank" rel="nofollow external" href="https://oimo.io/works/blob/">
+      <fish>
+        <img src="https://oimo.io/favicon.ico" alt="" class="fish-eye">
+        <div class="game-info">
+          <div class="game-title">斑点玩具</div>
+          <div class="game-desc">非常有意思的橡皮糖玩具</div>
+        </div>
+      </fish>
+    </a>
 
 
     <!-- 气泡 -->
